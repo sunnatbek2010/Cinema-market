@@ -1,17 +1,16 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Skeleton } from 'primereact/skeleton';
-        
 
 
-const img_300 = "https://image.tmdb.org/t/p/w300";
-const APIKey = '1fd40a54bb7c8b5e91b107f78cdaac79';
-const BASE_URL = 'https://api.themoviedb.org/3/';
 
 const Home = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
 
+  const img_300 = import.meta.env.VITE_IMG_300;
+  const APIKey = import.meta.env.VITE_API_KEY;
+  const BASE_URL = import.meta.env.VITE_BASE_URL;
 
 
   const fetchMovies = async () => {
