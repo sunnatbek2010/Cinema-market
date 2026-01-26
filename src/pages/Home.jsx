@@ -52,9 +52,9 @@ const Home = () => {
 
   return (
     <div>
-      <div className='min-h-screen bg-[#0b0f2a] bg-[radial-gradient(ellipse_at_top_left,_rgba(168,85,247,0.35)_0%,_transparent_50%),radial-gradient(ellipse_at_bottom_right,_rgba(236,72,153,0.35)_0%,_transparent_50%)]'>
+      <div className='min-h-screen bg-[#1E1E37]'>
 
-        <div style={{ backgroundImage: `url(${bg})` }}>
+        <div>
           <div className='w-[1110px] pt-45 pb-[300px] mx-auto'>
             <h1 className='text-white text-[46px] text-center  font-bold'>NFTs by Curios Music</h1>
             <p className='text-white text-[20px] mt-3 text-center '>Own a one-of-a-kind and limited digital collectible</p>
