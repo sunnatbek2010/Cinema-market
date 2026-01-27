@@ -6,7 +6,6 @@ import { useNavigate } from 'react-router';
 const Home = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
-
   const [modalVisible, setModalVisible] = useState(false);
   const [selectedCard, setSelectedCard] = useState(null);
 
@@ -16,16 +15,11 @@ const Home = () => {
 
   const navigate = useNavigate();
 
-
   const fetchMovies = async () => {
     try {
       setLoading(true);
       const res = await axios.get(`${BASE_URL}discover/movie`, {
-        params: {
-          api_key: APIKey,
-          language: 'en-US',
-          sort_by: 'popularity.desc',
-        },
+        params: { api_key: APIKey, language: 'en-US', sort_by: 'popularity.desc' }
       });
       setData(res.data.results.slice(0, 8));
     } catch (err) {
@@ -34,16 +28,11 @@ const Home = () => {
     setLoading(false);
   };
 
-
   const fetchSeries = async () => {
     try {
       setLoading(true);
       const res = await axios.get(`${BASE_URL}discover/tv`, {
-        params: {
-          api_key: APIKey,
-          language: 'en-US',
-          sort_by: 'popularity.desc'
-        },
+        params: { api_key: APIKey, language: 'en-US', sort_by: 'popularity.desc' }
       });
       setData(res.data.results.slice(0, 8));
     } catch (err) {
@@ -62,16 +51,25 @@ const Home = () => {
     setSelectedCard(null);
   };
 
-  const selectOption = (option) => {
-    const saved = JSON.parse(localStorage.getItem('marketplaceCards') || '[]');
+  const selectOption = async (option) => {
+    if (!selectedCard) return;
+
     const cardWithAction = { ...selectedCard, action: option };
-    if (!saved.some(c => c.id === selectedCard.id)) {
-      saved.push(cardWithAction);
-      localStorage.setItem('marketplaceCards', JSON.stringify(saved));
+
+    try {
+      const res = await axios.get(`http://localhost:3000/actions?id=${selectedCard.id}`);
+      if (res.data.length > 0) {
+        const existingId = res.data[0].id;
+        await axios.put(`http://localhost:3000/actions/${existingId}`, cardWithAction);
+      } else {
+        await axios.post('http://localhost:3000/actions', cardWithAction);
+      }
+    } catch (err) {
+      console.error('Ошибка при сохранении карточки в db.json:', err);
     }
+
     closeModal();
   };
-
 
   return (
     <div className="min-h-screen bg-[#1E1E37]">
@@ -114,9 +112,8 @@ const Home = () => {
         </section>
       </main>
 
-
       {modalVisible && selectedCard && (
-        <div className="fixed inset-0  bg-opacity-40 backdrop-blur-sm flex justify-center items-center z-50">
+        <div className="fixed inset-0 bg-opacity-40 backdrop-blur-sm flex justify-center items-center z-50">
           <div className="bg-[#1E1E37] p-6 rounded-xl w-[300px] text-center relative">
             <button onClick={closeModal} className="absolute top-3 right-3 text-white text-xl font-bold">×</button>
             <h2 className="text-white text-[18px] font-bold mb-4">Выберите вариант</h2>
