@@ -19,7 +19,11 @@ const Home = () => {
     try {
       setLoading(true);
       const res = await axios.get(`${BASE_URL}discover/movie`, {
-        params: { api_key: APIKey, language: 'en-US', sort_by: 'popularity.desc' }
+        params: {
+          api_key: APIKey,
+          language: 'en-US',
+          sort_by: 'popularity.desc'
+        }
       });
       setData(res.data.results.slice(0, 8));
     } catch (err) {
@@ -32,7 +36,11 @@ const Home = () => {
     try {
       setLoading(true);
       const res = await axios.get(`${BASE_URL}discover/tv`, {
-        params: { api_key: APIKey, language: 'en-US', sort_by: 'popularity.desc' }
+        params: {
+          api_key: APIKey,
+          language: 'en-US',
+          sort_by: 'popularity.desc'
+        }
       });
       setData(res.data.results.slice(0, 8));
     } catch (err) {
@@ -67,7 +75,7 @@ const Home = () => {
     } catch (err) {
       console.error('Ошибка при сохранении карточки в db.json:', err);
     }
-
+    3
     closeModal();
   };
 
