@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { Skeleton } from 'primereact/skeleton';
 import { useNavigate } from 'react-router';
+import { useEffect } from 'react';
 
 const Home = () => {
   const [data, setData] = useState([]);
@@ -78,6 +79,10 @@ const Home = () => {
     3
     closeModal();
   };
+
+  useEffect(() => {
+    fetchMovies()
+  }, [])
 
   return (
     <div className="min-h-screen bg-[#1E1E37]">
