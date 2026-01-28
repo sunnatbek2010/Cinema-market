@@ -102,6 +102,7 @@ const Home = () => {
             <button className="text-white mt-[28px] font-bold rounded-[23px] py-[8px] px-[16px] hover:bg-gradient-to-r from-[#5D00FA] to-[#D70BCA] text-[14px]" onClick={fetchSeries}>Discover TV Series</button>
           </div>
 
+
           <div className="flex flex-wrap justify-center gap-[30px]">
             {loading
               ? Array(8).fill(0).map((_, i) => (
@@ -117,7 +118,7 @@ const Home = () => {
                   <div className="absolute top-2 right-2 cursor-pointer text-white text-xl font-bold" onClick={() => openModal(item)}>⋮</div>
                   <img className="rounded-[5px]" src={item.poster_path ? `${img_300}${item.poster_path}` : ''} alt={item.title || item.name} />
                   <p className="text-white line-clamp-1 font-bold mt-3 text-center">{item.title || item.name}</p>
-                  <p className="text-white text-center mt-1">⭐ {item.vote_average}</p>
+                  <p className="text-white text-center mt-1">⭐️ {item.vote_average}</p>
                   <button onClick={() => navigate('/marketplace')} className="bg-white font-bold py-3.5 px-10 rounded-[46px] text-transparent bg-clip-text bg-[linear-gradient(90deg,#5D00FA_0%,#D70BCA_100%)] mt-4">View details</button>
                 </div>
               ))}
