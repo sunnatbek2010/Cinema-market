@@ -16,9 +16,9 @@ const Nav = () => {
             <Link className='text-[14px] font-bold text-white hover:text-[#5B00FB] hover:border-t transition-all' to="/">MARKETPLACE</Link>
           </div>
           <div >
-            <button>
+            <Link to="/profile">
               <img src={register} alt="register" />
-            </button>
+            </Link>
           </div>
         </nav>
       </header>
