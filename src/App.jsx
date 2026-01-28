@@ -4,7 +4,7 @@ import Layout from './pages/Layout'
 import Home from './pages/Home'
 import Discover from './pages/Discover'
 import Marketplace from './pages/Marketplace.jsx';
-import LoginRegister from "./pages/LoginRegister";
+import Profile from './pages/Profile'
 
 const App = () => {
   return (
@@ -14,7 +14,7 @@ const App = () => {
           <Route index element={<Home />} />
           <Route path="discover" element={<Discover />} />
           <Route path="marketplace" element={<Marketplace />} />
-          <Route path="/account" element={<LoginRegister />} />
+          <Route path='/profile' element={<Profile />} />
         </Route>
       </Routes>
     </>
