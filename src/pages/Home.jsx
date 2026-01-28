@@ -1,8 +1,10 @@
 import React from 'react'
-
+import Name from './Profile.jsx';
 const Home = () => {
   return (
-    <div>Home</div>
+    <div>
+
+    </div>
   )
 }
 
