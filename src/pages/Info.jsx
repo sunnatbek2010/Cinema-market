@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router";
+import { useNavigate, useParams } from "react-router";
 import axios from "axios";
-
+import { Undo2 } from 'lucide-react';
 export const img_300 = "https://image.tmdb.org/t/p/w300";
 
 const Info = () => {
+
+  const navigate = useNavigate();
   const { id } = useParams();
   const [item, setItem] = useState(null);
 
@@ -39,21 +41,26 @@ const Info = () => {
 
 
         <div>
-          <h1 className= "mb-30 text-4xl font-bold bg-white/10 backdrop-blur-lg border border-white/10 rounded-2xl p-4">
+          <div className="flex items-center justify-between mb-30 text-4xl font-bold bg-white/10 backdrop-blur-lg border border-white/10 rounded-2xl p-4">
+            <h1>
             {item?.title}
           </h1>
-
-          <p className="mt-6 opacity-80 bg-white/10 backdrop-blur-lg border border-white/10 rounded-2xl p-4">
-            {item?.release_date}
-          </p>
-
-          <p className="mt-6 opacity-80 bg-white/10 backdrop-blur-lg border border-white/10 rounded-2xl p-4">
-            {item?.overview}
-          </p>
+          <button className="cursor-pointer" onClick={() => navigate(-1)}>
+              <Undo2 />
+            </button>
         </div>
 
+        <p className="mt-6 opacity-80 bg-white/10 backdrop-blur-lg border border-white/10 rounded-2xl p-4">
+          {item?.release_date}
+        </p>
+
+        <p className="mt-6 opacity-80 bg-white/10 backdrop-blur-lg border border-white/10 rounded-2xl p-4">
+          {item?.overview}
+        </p>
       </div>
+
     </div>
+    </div >
   );
 };
 

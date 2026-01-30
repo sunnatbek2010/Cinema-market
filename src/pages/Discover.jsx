@@ -58,6 +58,8 @@ export default function Discover() {
         setItems(res.data.results);
     };
 
+
+
     return (
         <div className="min-h-screen text-white p-8">
             {/* Top Bar */}
@@ -150,6 +152,11 @@ export default function Discover() {
                         </div>
                     </div>
                 ))}
+            </div>
+            <div className="flex items-center justify-center gap-6 mt-10 text-sm">
+                <button disabled={page === 1} onClick={() => setPage(p => p - 1)} className="px-4 py-1 border rounded-full disabled:opacity-30">PREV</button>
+                <span>Page {page}</span>
+                <button onClick={() => setPage(p => p + 1)} className="px-4 py-1 border rounded-full">NEXT</button>
             </div>
         </div>
     );

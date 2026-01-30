@@ -6,6 +6,7 @@ import Marketplace from "./pages/Marketplace";
 import Info from './pages/Info.jsx';
 import { BrowserRouter as Router, Routes, Route } from 'react-router';
 import MarketplaceCard from './pages/MarketplaceCard';
+import Profile from './pages/Profile'
 
 const App = () => {
   return (
