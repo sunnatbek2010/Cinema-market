@@ -1,14 +1,12 @@
 import React from 'react'
-import { Link } from 'react-router'
 
-const LinksProfile = ({ navTitle, link, children }) => {
+const LinksProfile = ({ children, navTitle }) => {
     return (
-        <>
-            <Link to={link} className='flex gap-2.5 py-4 items-center'>
-                {children}
-                {navTitle}
-            </Link>
-        </>
+        <div className="group flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-300 cursor-pointer text-white 
+        hover:bg-[linear-gradient(90deg,#5D00FA_0%,#D70BCA_100%)]" >
+            <span className="opacity-80 group-hover:opacity-100 transition">{children}</span>
+            <span className="font-medium">{navTitle}</span>
+        </div>
     )
 }
 
