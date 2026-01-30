@@ -1,4 +1,3 @@
-import React from 'react';
 import React from 'react'
 import Layout from './pages/Layout'
 import Home from './pages/Home'
@@ -8,6 +7,8 @@ import Info from './pages/Info.jsx';
 import { BrowserRouter as Router, Routes, Route } from 'react-router';
 import MarketplaceCard from './pages/MarketplaceCard';
 import Profile from './pages/Profile'
+import Settings from './pages/Settings.jsx';
+import ProfileLayout from './pages/profileLayout.jsx';
 
 const App = () => {
   return (
@@ -18,7 +19,12 @@ const App = () => {
         <Route path="info/:id" element={<Info />} />
         <Route path="marketplace" element={<Marketplace />} />
         <Route path="marketplace" element={<MarketplaceCard />} />
-      </Route>
+
+        <Route element={<ProfileLayout />}>
+          <Route path="/profile" element={<Profile />} />
+          <Route path='/settings' element={<Settings />} />
+        </Route>
+      </Route>  
     </Routes>
   );
 };
