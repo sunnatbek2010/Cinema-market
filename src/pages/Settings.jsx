@@ -35,7 +35,7 @@ const Profile = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#101029] text-white px-12 py-10 w-full">
+    <div className="min-h-screen  text-white px-12 py-10 w-full">
       <div className="max-w-7xl mx-auto ">
 
         <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">🎨 Theme Settings</h2>

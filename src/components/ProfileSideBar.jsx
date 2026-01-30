@@ -43,7 +43,7 @@ const navlinks = [
 
 const ProfileSideBar = () => {
     return (
-        <div className="bg-[#1E1E37] w-[320px] rounded-xl p-7">
+        <div className=" w-[320px] rounded-xl p-7">
             {/* avatar */}
             <div className="flex gap-4 items-center">
                 <img

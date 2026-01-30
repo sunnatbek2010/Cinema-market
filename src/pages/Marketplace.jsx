@@ -33,12 +33,12 @@ export default function Marketplace() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#0b0c2a] via-[#1a1244] to-[#2b0f3f] text-white p-8">
+    <div className="min-h-screen text-white p-8">
       <h1 className="text-2xl font-semibold mb-6">Marketplace</h1>
 
       <div className="flex items-center justify-between mb-8">
         <div className="relative">
-          <button onClick={() => setOpenCategory(!openCategory)} className="flex items-center gap-2 bg-gradient-to-r from-purple-600/30 to-pink-600/30 backdrop-blur-xl px-5 py-2 rounded-full border border-white/20 hover:border-white/40 transition">
+          <button onClick={() => setOpenCategory(!openCategory)} className="flex items-center gap-2 -gradient-to-r from-purple-600/30 to-pink-600/30 backdrop-blur-xl px-5 py-2 rounded-full border border-white/20 hover:border-white/40 transition">
             <span className="text-sm font-medium">{selectedGenre ? genres.find(g => g.id === selectedGenre)?.name : "Category"}</span>
             <svg className={`w-4 h-4 opacity-70 transition ${openCategory ? "rotate-180" : ""}`} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
@@ -46,7 +46,7 @@ export default function Marketplace() {
           </button>
 
           {openCategory && (
-            <div className="absolute left-0 mt-3 w-56 rounded-2xl bg-[#120f2d]/95 backdrop-blur-xl border border-white/10 shadow-xl max-h-64 overflow-y-auto z-50">
+            <div className="absolute left-0 mt-3 w-56 rounded-2xl  backdrop-blur-xl border border-white/10 shadow-xl max-h-64 overflow-y-auto z-50">
               <button onClick={() => { setSelectedGenre(""); setOpenCategory(false); }} className="w-full text-left px-4 py-2 text-sm hover:bg-white/10 transition">All</button>
               {genres.map(g => (
                 <button key={g.id} onClick={() => { filterByGenre(g.id); setOpenCategory(false); }} className="w-full text-left px-4 py-2 text-sm hover:bg-white/10 transition">{g.name}</button>
@@ -60,11 +60,11 @@ export default function Marketplace() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         {items.slice(0, 3).map(movie => (
-          <div key={movie.id} className="bg-white/10 backdrop-blur-xl rounded-2xl p-4 text-center shadow-lg">
+          <div key={movie.id} className="backdrop-blur-xl rounded-2xl p-4 text-center shadow-lg">
             <img src={movie.poster_path ? img_300 + movie.poster_path : ""} alt={movie.title || movie.name} className="rounded-xl mx-auto mb-4" />
             <h3 className="font-semibold">{movie.title || movie.name}</h3>
             <p className="text-sm opacity-70 mb-4">{movie.media_type === "tv" ? "TV Series" : "Movie"}</p>
-            <Link to={`/info/${movie.id}`} className="inline-block bg-purple-600 hover:bg-purple-700 transition text-white font-bold py-2 px-6 rounded-full">View Details</Link>
+            <Link to={`/info/${movie.id}`} className="inline-block -purple-600 hover:bg-purple-700 transition text-white font-bold py-2 px-6 rounded-full">View Details</Link>
           </div>
         ))}
       </div>

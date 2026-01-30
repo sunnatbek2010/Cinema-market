@@ -18,7 +18,7 @@ const MarketplaceCard = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#1E1E37] py-10">
+    <div className="min-h-screen py-10">
       <div className="w-[1110px] mx-auto">
         <h1 className="text-white text-[36px] font-bold text-center mb-10">Marketplace</h1>
 
@@ -27,7 +27,7 @@ const MarketplaceCard = () => {
         ) : (
           <div className="flex flex-wrap justify-center gap-[30px]">
             {cards.map((item) => (
-              <div key={item.id} className="w-[255px] py-[20px] px-[20px] bg-[radial-gradient(2464.13%_850.69%_at_100%_6.65%,_#BB82DB_0%,_#636DC1_19.3%,_#1D0F35_100%)] rounded-[10px] flex flex-col items-center" >
+              <div key={item.id} className="w-[255px] py-[20px] px-[20px] -[radial-gradient(2464.13%_850.69%_at_100%_6.65%,_#BB82DB_0%,_#636DC1_19.3%,_#1D0F35_100%)] rounded-[10px] flex flex-col items-center" >
                 <img className="rounded-[5px]" src={item.poster_path ? `${img_300}${item.poster_path}` : ''} alt={item.title || item.name} />
                 <p className="text-white line-clamp-1 font-bold mt-3 text-center">{item.title || item.name}</p>
                 <p className="text-white text-center mt-1">⭐ {item.vote_average}</p>
