@@ -106,6 +106,10 @@ export default function Discover() {
                     )}
                 </div>
 
+
+
+
+
                 <input
                     type="text"
                     placeholder="Search Movie..."

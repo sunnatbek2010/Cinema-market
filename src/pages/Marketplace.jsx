@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router";
 
 export const APIKey = "1fd40a54bb7c8b5e91b107f78cdaac79";
 export const img_300 = "https://image.tmdb.org/t/p/w300";
@@ -63,7 +64,7 @@ export default function Marketplace() {
             <img src={movie.poster_path ? img_300 + movie.poster_path : ""} alt={movie.title || movie.name} className="rounded-xl mx-auto mb-4" />
             <h3 className="font-semibold">{movie.title || movie.name}</h3>
             <p className="text-sm opacity-70 mb-4">{movie.media_type === "tv" ? "TV Series" : "Movie"}</p>
-            <button className="px-6 py-2 rounded-full text-sm font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-600 to-purple-700 shadow-lg shadow-indigo-500/30 transition-all duration-300 ease-out hover:scale-105 hover:shadow-xl hover:shadow-purple-500/40 hover:from-blue-600 hover:via-indigo-700 hover:to-purple-800 active:scale-95">View more</button>
+            <Link to={`/info/${movie.id}`} className="inline-block bg-purple-600 hover:bg-purple-700 transition text-white font-bold py-2 px-6 rounded-full">View Details</Link>
           </div>
         ))}
       </div>
