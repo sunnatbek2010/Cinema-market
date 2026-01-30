@@ -6,7 +6,7 @@ import register from './../assets/register.png';
 
 const Nav = () => {
   return (
-    <div className=' bg-[#1E1E37]'>
+    <div className=''>
       <header>
         <nav className='w-[1110px] mx-auto flex justify-between pb-22 pt-[61px]'>
           <div></div>

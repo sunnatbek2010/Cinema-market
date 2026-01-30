@@ -24,7 +24,7 @@ const Profile = () => {
   const filteredCards = filter ? cards.filter(card => card.action === filter) : cards
 
   return (
-    <div className="bg-[#101029] min-h-screen text-white">
+    <div className=" text-white">
       <div className="max-w-[1400px] mx-auto flex gap-8 p-12 items-start">
 
 
@@ -72,10 +72,10 @@ const Profile = () => {
 
 
         <div className="flex-1 bg-[#1E1E37] rounded-md p-8">
-          <h1 className="text-[32px] font-bold text-center mb-10">Marketplace</h1>
+          <h1 className="text-[32px] font-bold text-center mb-10 animate-bounce">List of Movies & Series</h1>
 
           {filteredCards.length === 0 ? (
-            <p className="text-center opacity-70">Нет выбранных карточек</p>) :
+            <p className="text-center">Нет выбранных карточек</p>) :
             (
               <div className="flex flex-wrap justify-center gap-8">
                 {filteredCards.map(item => (

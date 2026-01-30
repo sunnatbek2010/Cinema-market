@@ -1,227 +1,25 @@
 {
   "actions": [
     {
-      "id": 83533,
+      "id": 1306368,
       "adult": false,
-      "backdrop_path": "/3Dqievkc7krcTtDE2hjRkIsEzB1.jpg",
-      "genre_ids": [
-        878,
-        12,
-        14
-      ],
-      "original_language": "en",
-      "original_title": "Avatar: Fire and Ash",
-      "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
-      "popularity": 222.7451,
-      "poster_path": "/5bxrxnRaxZooBAxgUVBZ13dpzC7.jpg",
-      "release_date": "2025-12-17",
-      "title": "Avatar: Fire and Ash",
-      "video": false,
-      "vote_average": 7.301,
-      "vote_count": 1642,
-      "action": "Смотрел"
-    },
-    {
-      "id": 1084242,
-      "adult": false,
-      "backdrop_path": "/5h2EsPKNDdB3MAtOk9MB9Ycg9Rz.jpg",
-      "genre_ids": [
-        16,
-        35,
-        12,
-        10751,
-        9648
-      ],
-      "original_language": "en",
-      "original_title": "Zootopia 2",
-      "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
-      "popularity": 376.1868,
-      "poster_path": "/oJ7g2CifqpStmoYQyaLQgEU32qO.jpg",
-      "release_date": "2025-11-26",
-      "title": "Zootopia 2",
-      "video": false,
-      "vote_average": 7.6,
-      "vote_count": 1294,
-      "action": "Нравится"
-    },
-    {
-      "id": 1419406,
-      "adult": false,
-      "backdrop_path": "/4BtL2vvEufDXDP4u6xQjjQ1Y2aT.jpg",
-      "genre_ids": [
-        28,
-        80,
-        18,
-        53
-      ],
-      "original_language": "zh",
-      "original_title": "捕风追影",
-      "overview": "Macau Police brings the tracking expert police officer out of retirement to help catch a dangerous group of professional thieves.",
-      "popularity": 363.8111,
-      "poster_path": "/e0RU6KpdnrqFxDKlI3NOqN8nHL6.jpg",
-      "release_date": "2025-08-16",
-      "title": "The Shadow's Edge",
-      "video": false,
-      "vote_average": 7.217,
-      "vote_count": 352,
-      "action": "Не нравится"
-    },
-    {
-      "id": 1326878,
-      "adult": false,
-      "backdrop_path": "/xGbNoh7aWmU81oYuxJoFI07Rz5I.jpg",
+      "backdrop_path": "/3F2EXWF1thX0BdrVaKvnm6mAhqh.jpg",
       "genre_ids": [
         28,
         53,
         80
       ],
       "original_language": "en",
-      "original_title": "Strangers",
-      "overview": "Seeking revenge on her abusive husband, a woman's life takes a dark turn when she meets a mysterious hitman. Drawn into a whirlwind romance, she spirals into a dangerous vigilante spree. As the body count rises, she begins to unravel the true nature of her partner and the secrets they both conceal.",
-      "popularity": 258.9958,
-      "poster_path": "/ohpuwSBMgP44OPduPkpOtLxh90w.jpg",
-      "release_date": "2024-08-16",
-      "title": "Strangers",
+      "original_title": "The Rip",
+      "overview": "Trust frays when a team of Miami cops discovers millions in cash inside a run-down stash house, calling everyone — and everything — into question.",
+      "popularity": 300.7556,
+      "poster_path": "/p4bW2sJKAwcHuLpfoZK7Zo63osA.jpg",
+      "release_date": "2026-01-13",
+      "title": "The Rip",
       "video": false,
-      "vote_average": 5.5,
-      "vote_count": 24,
+      "vote_average": 7.051,
+      "vote_count": 867,
       "action": "Не нравится"
-    },
-    {
-      "id": 1242898,
-      "adult": false,
-      "backdrop_path": "/ebyxeBh56QNXxSJgTnmz7fXAlwk.jpg",
-      "genre_ids": [
-        28,
-        878,
-        12
-      ],
-      "original_language": "en",
-      "original_title": "Predator: Badlands",
-      "overview": "Cast out from his clan, a young Predator finds an unlikely ally in a damaged android and embarks on a treacherous journey in search of the ultimate adversary.",
-      "popularity": 233.7913,
-      "poster_path": "/pHpq9yNUIo6aDoCXEBzjSolywgz.jpg",
-      "release_date": "2025-11-05",
-      "title": "Predator: Badlands",
-      "video": false,
-      "vote_average": 7.753,
-      "vote_count": 1703,
-      "action": "Нравится"
-    },
-    {
-      "id": 66732,
-      "adult": false,
-      "backdrop_path": "/8zbAoryWbtH0DKdev8abFAjdufy.jpg",
-      "genre_ids": [
-        10765,
-        9648,
-        10759
-      ],
-      "origin_country": [
-        "US"
-      ],
-      "original_language": "en",
-      "original_name": "Stranger Things",
-      "overview": "When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces, and one strange little girl.",
-      "popularity": 384.2354,
-      "poster_path": "/uOOtwVbSr4QDjAGIifLDwpb2Pdl.jpg",
-      "first_air_date": "2016-07-15",
-      "name": "Stranger Things",
-      "vote_average": 8.582,
-      "vote_count": 20462,
-      "action": "Смотрел"
-    },
-    {
-      "id": 224372,
-      "adult": false,
-      "backdrop_path": "/7mkUu1F2hVUNgz24xO8HPx0D6mK.jpg",
-      "genre_ids": [
-        18,
-        10765,
-        10759
-      ],
-      "origin_country": [
-        "US"
-      ],
-      "original_language": "en",
-      "original_name": "A Knight of the Seven Kingdoms",
-      "overview": "A century before the events of Game of Thrones, two unlikely heroes wandered Westeros: a young, naive but courageous knight, Ser Duncan the Tall, and his diminutive squire, Egg. Set in an age when the Targaryen line still holds the Iron Throne and the last dragon has not yet passed from living memory, great destinies, powerful foes, and dangerous exploits await these improbable and incomparable friends.",
-      "popularity": 252.9825,
-      "poster_path": "/6igvNs5VJB4ryBLgjjXksDVs0Fm.jpg",
-      "first_air_date": "2026-01-18",
-      "name": "A Knight of the Seven Kingdoms",
-      "vote_average": 8.073,
-      "vote_count": 130,
-      "action": "Не нравится"
-    },
-    {
-      "id": 2734,
-      "adult": false,
-      "backdrop_path": "/obtdxPgmfykYwVnvuYXC5f2xKlQ.jpg",
-      "genre_ids": [
-        80,
-        18,
-        9648
-      ],
-      "origin_country": [
-        "US"
-      ],
-      "original_language": "en",
-      "original_name": "Law & Order: Special Victims Unit",
-      "overview": "In the criminal justice system, sexually-based offenses are considered especially heinous. In New York City, the dedicated detectives who investigate these vicious felonies are members of an elite squad known as the Special Victims Unit. These are their stories.",
-      "popularity": 234.5812,
-      "poster_path": "/iofokHZoUB4Qhik4PflvJl8TT6a.jpg",
-      "first_air_date": "1999-09-20",
-      "name": "Law & Order: Special Victims Unit",
-      "vote_average": 7.936,
-      "vote_count": 4107,
-      "action": "Не нравится"
-    },
-    {
-      "id": 79744,
-      "adult": false,
-      "backdrop_path": "/6iNWfGVCEfASDdlNb05TP5nG0ll.jpg",
-      "genre_ids": [
-        80,
-        18,
-        35
-      ],
-      "origin_country": [
-        "US"
-      ],
-      "original_language": "en",
-      "original_name": "The Rookie",
-      "overview": "Starting over isn't easy, especially for small-town guy John Nolan who, after a life-altering incident, is pursuing his dream of being an LAPD officer. As the force's oldest rookie, he’s met with skepticism from some higher-ups who see him as just a walking midlife crisis.",
-      "popularity": 234.2566,
-      "poster_path": "/70kTz0OmjjZe7zHvIDrq2iKW7PJ.jpg",
-      "first_air_date": "2018-10-16",
-      "name": "The Rookie",
-      "vote_average": 8.532,
-      "vote_count": 2921,
-      "action": "Смотрел"
-    },
-    {
-      "id": 456,
-      "adult": false,
-      "backdrop_path": "/jvTeRgjFsp66xj8SWxhr7O2J4ud.jpg",
-      "genre_ids": [
-        10751,
-        16,
-        35
-      ],
-      "origin_country": [
-        "US"
-      ],
-      "original_language": "en",
-      "original_name": "The Simpsons",
-      "overview": "Set in Springfield, the average American town, the show focuses on the antics and everyday adventures of the Simpson family; Homer, Marge, Bart, Lisa and Maggie, as well as a virtual cast of thousands. Since the beginning, the series has been a pop culture icon, attracting hundreds of celebrities to guest star. The show has also made name for itself in its fearless satirical take on politics, media and American life in general.",
-      "popularity": 194.4589,
-      "poster_path": "/uWpG7GqfKGQqX4YMAo3nv5OrglV.jpg",
-      "first_air_date": "1989-12-17",
-      "name": "The Simpsons",
-      "vote_average": 8.012,
-      "vote_count": 10549,
-      "action": "Нравится"
     }
   ]
 }
