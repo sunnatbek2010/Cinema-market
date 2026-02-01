@@ -11,6 +11,7 @@ const Home = () => {
   const [modalVisible, setModalVisible] = useState(false);
   const [selectedCard, setSelectedCard] = useState(null);
 
+
   const img_300 = import.meta.env.VITE_IMG_300;
   const APIKey = import.meta.env.VITE_API_KEY;
   const BASE_URL = import.meta.env.VITE_BASE_URL;
@@ -66,27 +67,50 @@ const Home = () => {
 
     const cardWithAction = { ...selectedCard, action: option };
 
+    let endpoint = 'liked';
+    if (option === 'Не нравится') endpoint = 'disliked';
+    if (option === 'Смотрел') endpoint = 'watched';
+
     try {
-      const res = await axios.get(`http://localhost:3000/liked?id=${selectedCard.id}`);
+      const res = await axios.get(
+        `http://localhost:3000/${endpoint}?id=${selectedCard.id}`
+      );
+
       if (res.data.length > 0) {
         const existingId = res.data[0].id;
-        await axios.put(`http://localhost:3000/liked/${existingId}`, cardWithAction);
+        await axios.put(
+          `http://localhost:3000/${endpoint}/${existingId}`,
+          cardWithAction
+        );
       } else {
-        await axios.post('http://localhost:3000/liked', cardWithAction);
+        await axios.post(
+          `http://localhost:3000/${endpoint}`,
+          cardWithAction
+        );
       }
+      setData(prev =>
+        prev.map(card =>
+          card.id === selectedCard.id
+            ? { ...card, action: option }
+            : card
+        )
+      );
+
     } catch (err) {
-      console.error('Ошибка при сохранении карточки в db.json:', err);
+      console.error(err);
     }
-    3
+
     closeModal();
   };
+
+
 
   useEffect(() => {
     fetchMovies()
   }, [])
 
   return (
-    <div className="">
+    <div className="bg-black">
       <div className="w-[1110px] pt-45 pb-[300px] mx-auto">
         <h1 className="text-white text-[46px] text-center font-bold">NFTs by Curios Music</h1>
         <p className="text-white text-[20px] mt-3 text-center">Own a one-of-a-kind and limited digital collectible</p>
@@ -119,7 +143,17 @@ const Home = () => {
                   <img className="rounded-[5px]" src={item.poster_path ? `${img_300}${item.poster_path}` : ''} alt={item.title || item.name} />
                   <p className="text-white line-clamp-1 font-bold mt-3 text-center">{item.title || item.name}</p>
                   <p className="text-white text-center mt-1">⭐ {item.vote_average}</p>
-                  <button onClick={() => navigate('/profile')} className="bg-white font-bold py-3.5 px-10 rounded-[46px] text-transparent bg-clip-text bg-[linear-gradient(90deg,#5D00FA_0%,#D70BCA_100%)] mt-4">View details</button>
+                  <button disabled={!item.action} onClick={() => {
+                    if (item.action === 'Не нравится') navigate('/disliked');
+                    else if (item.action === 'Смотрел') navigate('/watched');
+                    else navigate('/liked');
+                  }}
+                    className={`font-bold py-3.5 px-10 rounded-[46px] mt-4
+                      ${item.action
+                        ? 'bg-white text-transparent bg-clip-text bg-[linear-gradient(90deg,#5D00FA_0%,#D70BCA_100%)]'
+                        : 'bg-gray-500 text-gray-300 cursor-not-allowed'
+                      }`}>View details</button>
+
                 </div>
               ))}
           </div>

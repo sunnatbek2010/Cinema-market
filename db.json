@@ -1,5 +1,183 @@
 {
-  "actions": [
+  "liked": [
+    {
+      "id": 1084242,
+      "adult": false,
+      "backdrop_path": "/5h2EsPKNDdB3MAtOk9MB9Ycg9Rz.jpg",
+      "genre_ids": [
+        16,
+        35,
+        12,
+        10751,
+        9648
+      ],
+      "original_language": "en",
+      "original_title": "Zootopia 2",
+      "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
+      "popularity": 446.4796,
+      "poster_path": "/oJ7g2CifqpStmoYQyaLQgEU32qO.jpg",
+      "release_date": "2025-11-26",
+      "title": "Zootopia 2",
+      "video": false,
+      "vote_average": 7.635,
+      "vote_count": 1401,
+      "action": "Нравится"
+    },
+    {
+      "id": 1168190,
+      "adult": false,
+      "backdrop_path": "/e4OnHU8HNAhdS6C4Ypk6NA26kPQ.jpg",
+      "genre_ids": [
+        28,
+        35,
+        80,
+        9648
+      ],
+      "original_language": "en",
+      "original_title": "The Wrecking Crew",
+      "overview": "Estranged half-brothers Jonny and James reunite after their father's mysterious death. As they search for the truth, buried secrets reveal a conspiracy threatening to tear their family apart.",
+      "popularity": 701.2958,
+      "poster_path": "/gbVwHl4YPSq6BcC92TQpe7qUTh6.jpg",
+      "release_date": "2026-01-28",
+      "title": "The Wrecking Crew",
+      "video": false,
+      "vote_average": 6.5,
+      "vote_count": 164,
+      "action": "Нравится"
+    },
+    {
+      "id": 66732,
+      "adult": false,
+      "backdrop_path": "/8zbAoryWbtH0DKdev8abFAjdufy.jpg",
+      "genre_ids": [
+        10765,
+        9648,
+        10759
+      ],
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "en",
+      "original_name": "Stranger Things",
+      "overview": "When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces, and one strange little girl.",
+      "popularity": 373.0737,
+      "poster_path": "/uOOtwVbSr4QDjAGIifLDwpb2Pdl.jpg",
+      "first_air_date": "2016-07-15",
+      "name": "Stranger Things",
+      "vote_average": 8.581,
+      "vote_count": 20487,
+      "action": "Нравится"
+    }
+  ],
+  "disliked": [
+    {
+      "id": 840464,
+      "adult": false,
+      "backdrop_path": "/27MIBdzUkPzBC1PAYLpRtbyq7bq.jpg",
+      "genre_ids": [
+        12,
+        53,
+        878
+      ],
+      "original_language": "en",
+      "original_title": "Greenland 2: Migration",
+      "overview": "Having found the safety of the Greenland bunker after the comet Clarke decimated the Earth, the Garrity family must now risk everything to embark on a perilous journey across the wasteland of Europe to find a new home.",
+      "popularity": 610.5376,
+      "poster_path": "/nh43XSQegiFELtR1CyGHeqPMXBA.jpg",
+      "release_date": "2026-01-07",
+      "title": "Greenland 2: Migration",
+      "video": false,
+      "vote_average": 6.527,
+      "vote_count": 221,
+      "action": "Не нравится"
+    },
+    {
+      "id": 1584215,
+      "adult": false,
+      "backdrop_path": "/eUERZRVjCTNdgnESlQxyaOJ2d4K.jpg",
+      "genre_ids": [
+        28
+      ],
+      "original_language": "en",
+      "original_title": "The Internship",
+      "overview": "A CIA-trained assassin recruits other graduates from her secret childhood program, The Internship, to violently destroy the organization. The CIA fights back with deadly force.",
+      "popularity": 221.2046,
+      "poster_path": "/fYqSOkix4rbDiZW0ACNnvZCpT6X.jpg",
+      "release_date": "2026-01-13",
+      "title": "The Internship",
+      "video": false,
+      "vote_average": 6.1,
+      "vote_count": 35,
+      "action": "Не нравится"
+    },
+    {
+      "id": 1419406,
+      "adult": false,
+      "backdrop_path": "/4BtL2vvEufDXDP4u6xQjjQ1Y2aT.jpg",
+      "genre_ids": [
+        28,
+        80,
+        18,
+        53
+      ],
+      "original_language": "zh",
+      "original_title": "捕风追影",
+      "overview": "Macau Police brings the tracking expert police officer out of retirement to help catch a dangerous group of professional thieves.",
+      "popularity": 398.1566,
+      "poster_path": "/e0RU6KpdnrqFxDKlI3NOqN8nHL6.jpg",
+      "release_date": "2025-08-16",
+      "title": "The Shadow's Edge",
+      "video": false,
+      "vote_average": 7.194,
+      "vote_count": 368,
+      "action": "Не нравится"
+    },
+    {
+      "id": 1234731,
+      "adult": false,
+      "backdrop_path": "/wdFQ1wTDX3mYjv3TX6OLLfrLqS9.jpg",
+      "genre_ids": [
+        12,
+        35,
+        27
+      ],
+      "original_language": "en",
+      "original_title": "Anaconda",
+      "overview": "A group of friends facing mid-life crises head to the rainforest with the intention of remaking their favorite movie from their youth, only to find themselves in a fight for their lives against natural disasters, giant snakes and violent criminals.",
+      "popularity": 298.0606,
+      "poster_path": "/qxMv3HwAB3XPuwNLMhVRg795Ktp.jpg",
+      "release_date": "2025-12-24",
+      "title": "Anaconda",
+      "video": false,
+      "vote_average": 5.9,
+      "vote_count": 332,
+      "action": "Не нравится"
+    }
+  ],
+  "watched": [
+    {
+      "id": 66732,
+      "adult": false,
+      "backdrop_path": "/8zbAoryWbtH0DKdev8abFAjdufy.jpg",
+      "genre_ids": [
+        10765,
+        9648,
+        10759
+      ],
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "en",
+      "original_name": "Stranger Things",
+      "overview": "When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces, and one strange little girl.",
+      "popularity": 373.0737,
+      "poster_path": "/uOOtwVbSr4QDjAGIifLDwpb2Pdl.jpg",
+      "first_air_date": "2016-07-15",
+      "name": "Stranger Things",
+      "vote_average": 8.581,
+      "vote_count": 20487,
+      "action": "Смотрел"
+    },
     {
       "id": 1306368,
       "adult": false,
@@ -12,59 +190,14 @@
       "original_language": "en",
       "original_title": "The Rip",
       "overview": "Trust frays when a team of Miami cops discovers millions in cash inside a run-down stash house, calling everyone — and everything — into question.",
-      "popularity": 300.7556,
-      "poster_path": "/p4bW2sJKAwcHuLpfoZK7Zo63osA.jpg",
+      "popularity": 214.9007,
+      "poster_path": "/eZo31Dhl5BQ6GfbMNf3oU0tUvPZ.jpg",
       "release_date": "2026-01-13",
       "title": "The Rip",
       "video": false,
-      "vote_average": 7.051,
-      "vote_count": 867,
-      "action": "Не нравится"
-    },
-    {
-      "id": 1168190,
-      "adult": false,
-      "backdrop_path": "/qE02kCXOOqINs0iRBjKoZbp8cg8.jpg",
-      "genre_ids": [
-        28,
-        35,
-        80,
-        9648
-      ],
-      "original_language": "en",
-      "original_title": "The Wrecking Crew",
-      "overview": "Estranged half-brothers Jonny and James reunite after their father's mysterious death. As they search for the truth, buried secrets reveal a conspiracy threatening to tear their family apart.",
-      "popularity": 476.9111,
-      "poster_path": "/gbVwHl4YPSq6BcC92TQpe7qUTh6.jpg",
-      "release_date": "2026-01-28",
-      "title": "The Wrecking Crew",
-      "video": false,
-      "vote_average": 6.333,
-      "vote_count": 60,
-      "action": "Нравится"
-    }
-  ],
-  "liked": [
-    {
-      "id": 1326878,
-      "adult": false,
-      "backdrop_path": "/xGbNoh7aWmU81oYuxJoFI07Rz5I.jpg",
-      "genre_ids": [
-        28,
-        53,
-        80
-      ],
-      "original_language": "en",
-      "original_title": "Strangers",
-      "overview": "Seeking revenge on her abusive husband, a woman's life takes a dark turn when she meets a mysterious hitman. Drawn into a whirlwind romance, she spirals into a dangerous vigilante spree. As the body count rises, she begins to unravel the true nature of her partner and the secrets they both conceal.",
-      "popularity": 234.1454,
-      "poster_path": "/ohpuwSBMgP44OPduPkpOtLxh90w.jpg",
-      "release_date": "2024-08-16",
-      "title": "Strangers",
-      "video": false,
-      "vote_average": 5.5,
-      "vote_count": 24,
-      "action": "Нравится"
+      "vote_average": 7.025,
+      "vote_count": 958,
+      "action": "Смотрел"
     }
   ]
 }
