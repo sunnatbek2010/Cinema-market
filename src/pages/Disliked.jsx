@@ -32,20 +32,19 @@ const Disliked = () => {
                     <h1 className="text-[32px] font-bold text-center mb-10 animate-bounce">List of Movies & Series</h1>
 
                     {filteredCards.length === 0 ? (
-                        <p className="text-center">Нет выбранных карточек</p>) :
-                        (
-                            <div className="flex flex-wrap justify-center gap-8">
-                                {filteredCards.map(item => (
-                                    <div key={item.id} className="w-[255px] py-5 px-5 bg-[radial-gradient(2464.13%_850.69%_at_100%_6.65%,_#BB82DB_0%,_#636DC1_19.3%,_#1D0F35_100%)] 
-                  rounded-[10px] flex flex-col items-center">
-                                        <img className="rounded-md" src={item.poster_path ? `${img_300}${item.poster_path}` : ''} alt={item.title || item.name} />
-                                        <p className="font-bold mt-3 text-center line-clamp-1">{item.title || item.name}</p>
-                                        <p className="mt-1">⭐ {item.vote_average}</p>
-                                        <p className="mt-2 font-semibold text-transparent bg-clip-text bg-[linear-gradient(90deg,#5D00FA_0%,#D70BCA_100%)]">{item.action}</p>
-                                    </div>
-                                ))}
-                            </div>
-                        )}
+                        <p className="text-center">Нет выбранных карточек</p>) : (
+                        <div className="flex flex-wrap justify-center gap-8">
+                            {filteredCards.map(item => (
+                                <div key={item.id} className="w-[255px] py-5 px-5 bg-[radial-gradient(2464.13%_850.69%_at_100%_6.65%,_#BB82DB_0%,_#636DC1_19.3%,_#1D0F35_100%)] 
+                                    rounded-[10px] flex flex-col items-center">
+                                    <img className="rounded-md" src={item.poster_path ? `${img_300}${item.poster_path}` : ''} alt={item.title || item.name} />
+                                    <p className="font-bold mt-3 text-center line-clamp-1">{item.title || item.name}</p>
+                                    <p className="mt-1">⭐ {item.vote_average}</p>
+                                    <p className="mt-2 font-semibold text-transparent bg-clip-text bg-[linear-gradient(90deg,#5D00FA_0%,#D70BCA_100%)]">{item.action}</p>
+                                </div>
+                            ))}
+                        </div>
+                    )}
                 </div>
             </div>
         </div>

@@ -17,7 +17,6 @@ const Home = () => {
   const BASE_URL = import.meta.env.VITE_BASE_URL;
 
   const navigate = useNavigate();
-
   const fetchMovies = async () => {
     try {
       setLoading(true);
@@ -28,13 +27,15 @@ const Home = () => {
           sort_by: 'popularity.desc'
         }
       });
-      setData(res.data.results.slice(0, 8));
+
+      const moviesWithActions = await loadActions(res.data.results.slice(0, 8));
+      setData(moviesWithActions);
+
     } catch (err) {
       console.error(err);
     }
     setLoading(false);
   };
-
   const fetchSeries = async () => {
     try {
       setLoading(true);
@@ -45,12 +46,16 @@ const Home = () => {
           sort_by: 'popularity.desc'
         }
       });
-      setData(res.data.results.slice(0, 8));
+
+      const seriesWithActions = await loadActions(res.data.results.slice(0, 8));
+      setData(seriesWithActions);
+
     } catch (err) {
       console.error(err);
     }
     setLoading(false);
   };
+
 
   const openModal = (item) => {
     setSelectedCard(item);
@@ -64,7 +69,6 @@ const Home = () => {
 
   const selectOption = async (option) => {
     if (!selectedCard) return;
-
     const cardWithAction = { ...selectedCard, action: option };
 
     let endpoint = 'liked';
@@ -72,38 +76,41 @@ const Home = () => {
     if (option === 'Смотрел') endpoint = 'watched';
 
     try {
-      const res = await axios.get(
-        `http://localhost:3000/${endpoint}?id=${selectedCard.id}`
-      );
-
+      const res = await axios.get(`http://localhost:3000/${endpoint}?id=${selectedCard.id}`);
+      
       if (res.data.length > 0) {
         const existingId = res.data[0].id;
-        await axios.put(
-          `http://localhost:3000/${endpoint}/${existingId}`,
-          cardWithAction
-        );
+        await axios.put(`http://localhost:3000/${endpoint}/${existingId}`, cardWithAction);
       } else {
-        await axios.post(
-          `http://localhost:3000/${endpoint}`,
-          cardWithAction
-        );
+        await axios.post(`http://localhost:3000/${endpoint}`, cardWithAction);
       }
-      setData(prev =>
-        prev.map(card =>
-          card.id === selectedCard.id
-            ? { ...card, action: option }
-            : card
-        )
+      setData(prev => prev.map(card => card.id === selectedCard.id ? { ...card, action: option } : card)
       );
-
     } catch (err) {
       console.error(err);
     }
-
     closeModal();
   };
 
+  const loadActions = async (items) => {
+    try {
+      const [liked, disliked, watched] = await Promise.all([
+        axios.get('http://localhost:3000/liked'),
+        axios.get('http://localhost:3000/disliked'),
+        axios.get('http://localhost:3000/watched'),
+      ]);
 
+      return items.map(item => {
+        if (liked.data.find(m => m.id === item.id)) return { ...item, action: 'Нравится' };
+        if (disliked.data.find(m => m.id === item.id)) return { ...item, action: 'Не нравится' };
+        if (watched.data.find(m => m.id === item.id)) return { ...item, action: 'Смотрел' };
+        return item;
+      });
+    } catch (err) {
+      console.error(err);
+      return items;
+    }
+  };
 
   useEffect(() => {
     fetchMovies()
@@ -143,6 +150,12 @@ const Home = () => {
                   <img className="rounded-[5px]" src={item.poster_path ? `${img_300}${item.poster_path}` : ''} alt={item.title || item.name} />
                   <p className="text-white line-clamp-1 font-bold mt-3 text-center">{item.title || item.name}</p>
                   <p className="text-white text-center mt-1">⭐ {item.vote_average}</p>
+
+                  {item.action && (
+                    <span className={`mt-2 px-3 py-2 rounded-full text-white font-bold text-sm ${item.action === 'Нравится' ? 'bg-green-500'
+                      : item.action === 'Не нравится' ? 'bg-red-500'
+                        : 'bg-blue-500'}`}>{item.action}</span>)}
+
                   <button disabled={!item.action} onClick={() => {
                     if (item.action === 'Не нравится') navigate('/disliked');
                     else if (item.action === 'Смотрел') navigate('/watched');
@@ -153,7 +166,6 @@ const Home = () => {
                         ? 'bg-white text-transparent bg-clip-text bg-[linear-gradient(90deg,#5D00FA_0%,#D70BCA_100%)]'
                         : 'bg-gray-500 text-gray-300 cursor-not-allowed'
                       }`}>View details</button>
-
                 </div>
               ))}
           </div>
