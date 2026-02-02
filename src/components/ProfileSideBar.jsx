@@ -15,22 +15,22 @@ const navlinks = [
         icon: <Settings size={18} />
     },
     {
-        link: '/liked',
+        link: 'liked',
         navTitle: 'Liked movies',
         icon: <Heart size={18} />
     },
     {
-        link: '/disliked',
+        link: 'disliked',
         navTitle: 'Disliked movies',
         icon: <ThumbsDown size={18} />
     },
     {
-        link: '/watched',
+        link: 'watched',
         navTitle: 'Watched movies',
         icon: <MonitorPause size={18} />
     },
     {
-        link: '/recommended',
+        link: 'recommended',
         navTitle: 'Recommended movies',
         icon: <SatelliteDish size={18} />
     },

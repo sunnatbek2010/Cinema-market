@@ -11,12 +11,12 @@ const Home = () => {
   const [modalVisible, setModalVisible] = useState(false);
   const [selectedCard, setSelectedCard] = useState(null);
 
+
   const img_300 = import.meta.env.VITE_IMG_300;
   const APIKey = import.meta.env.VITE_API_KEY;
   const BASE_URL = import.meta.env.VITE_URL_ORIGINAL;
 
   const navigate = useNavigate();
-
   const fetchMovies = async () => {
     try {
       setLoading(true);
@@ -27,13 +27,15 @@ const Home = () => {
           sort_by: 'popularity.desc'
         }
       });
-      setData(res.data.results.slice(0, 8));
+
+      const moviesWithActions = await loadActions(res.data.results.slice(0, 8));
+      setData(moviesWithActions);
+
     } catch (err) {
       console.error(err);
     }
     setLoading(false);
   };
-
   const fetchSeries = async () => {
     try {
       setLoading(true);
@@ -44,12 +46,16 @@ const Home = () => {
           sort_by: 'popularity.desc'
         }
       });
-      setData(res.data.results.slice(0, 8));
+
+      const seriesWithActions = await loadActions(res.data.results.slice(0, 8));
+      setData(seriesWithActions);
+
     } catch (err) {
       console.error(err);
     }
     setLoading(false);
   };
+
 
   const openModal = (item) => {
     setSelectedCard(item);
@@ -63,22 +69,47 @@ const Home = () => {
 
   const selectOption = async (option) => {
     if (!selectedCard) return;
-
     const cardWithAction = { ...selectedCard, action: option };
 
+    let endpoint = 'liked';
+    if (option === 'Не нравится') endpoint = 'disliked';
+    if (option === 'Смотрел') endpoint = 'watched';
+
     try {
-      const res = await axios.get(`http://localhost:3000/liked?id=${selectedCard.id}`);
+      const res = await axios.get(`http://localhost:3000/${endpoint}?id=${selectedCard.id}`);
+      
       if (res.data.length > 0) {
         const existingId = res.data[0].id;
-        await axios.put(`http://localhost:3000/liked/${existingId}`, cardWithAction);
+        await axios.put(`http://localhost:3000/${endpoint}/${existingId}`, cardWithAction);
       } else {
-        await axios.post('http://localhost:3000/liked', cardWithAction);
+        await axios.post(`http://localhost:3000/${endpoint}`, cardWithAction);
       }
+      setData(prev => prev.map(card => card.id === selectedCard.id ? { ...card, action: option } : card)
+      );
     } catch (err) {
-      console.error('Ошибка при сохранении карточки в db.json:', err);
+      console.error(err);
     }
-    3
     closeModal();
+  };
+
+  const loadActions = async (items) => {
+    try {
+      const [liked, disliked, watched] = await Promise.all([
+        axios.get('http://localhost:3000/liked'),
+        axios.get('http://localhost:3000/disliked'),
+        axios.get('http://localhost:3000/watched'),
+      ]);
+
+      return items.map(item => {
+        if (liked.data.find(m => m.id === item.id)) return { ...item, action: 'Нравится' };
+        if (disliked.data.find(m => m.id === item.id)) return { ...item, action: 'Не нравится' };
+        if (watched.data.find(m => m.id === item.id)) return { ...item, action: 'Смотрел' };
+        return item;
+      });
+    } catch (err) {
+      console.error(err);
+      return items;
+    }
   };
 
   useEffect(() => {
@@ -86,14 +117,7 @@ const Home = () => {
   }, [])
 
   return (
-    <div className="">
-      <div className="w-[1110px] pt-45 pb-[300px] mx-auto">
-        <h1 className="text-white text-[46px] text-center font-bold">NFTs by Curios Music</h1>
-        <p className="text-white text-[20px] mt-3 text-center">Own a one-of-a-kind and limited digital collectible</p>
-        <div className="flex justify-center mt-[27px]">
-          <button className="text-white bg-gradient-to-r from-[#5D00FA] to-[#D70BCA] font-bold py-3.5 px-10 rounded-[46px]">Latest NFT drops</button>
-        </div>
-      </div>
+    <div >
 
       <main>
         <section className="w-[1110px] pt-[90px] pb-[160px] mx-auto">
@@ -119,16 +143,23 @@ const Home = () => {
                   <div className="absolute top-2 right-2 cursor-pointer text-white text-xl font-bold" onClick={() => openModal(item)}>⋮</div>
                   <img className="rounded-[5px]" src={item.poster_path ? `${img_300}${item.poster_path}` : ''} alt={item.title || item.name} />
                   <p className="text-white line-clamp-1 font-bold mt-3 text-center">{item.title || item.name}</p>
-                  <p className="text-white text-center mt-1">⭐️ {item.vote_average}</p>
-                  <button onClick={() => navigate('/marketplace')} className="  inline-flex items-center justify-center
-  px-6 py-2 rounded-full
-  bg-gradient-to-r from-purple-600 to-indigo-600
-  text-white font-semibold
-  shadow-lg shadow-purple-500/30
-  hover:shadow-xl hover:shadow-purple-500/50
-  hover:scale-105
-  active:scale-95
-  transition-all duration-300 mt-4">View details</button>
+                  <p className="text-white text-center mt-1">⭐ {item.vote_average}</p>
+
+                  {item.action && (
+                    <span className={`mt-2 px-3 py-2 rounded-full text-white font-bold text-sm ${item.action === 'Нравится' ? 'bg-green-500'
+                      : item.action === 'Не нравится' ? 'bg-red-500'
+                        : 'bg-blue-500'}`}>{item.action}</span>)}
+
+                  <button disabled={!item.action} onClick={() => {
+                    if (item.action === 'Не нравится') navigate('/disliked');
+                    else if (item.action === 'Смотрел') navigate('/watched');
+                    else navigate(`/info/${item.id}`);
+                  }}
+                    className={`font-bold py-3.5 px-10 rounded-[46px] mt-4
+                      ${item.action
+                        ? 'bg-white text-transparent bg-clip-text bg-[linear-gradient(90deg,#5D00FA_0%,#D70BCA_100%)]'
+                        : 'bg-gray-500 text-gray-300 cursor-not-allowed'
+                      }`}>View details</button>
                 </div>
               ))}
           </div>
