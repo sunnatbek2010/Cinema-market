@@ -113,5 +113,16 @@
       "vote_count": 20499,
       "action": "Смотрел"
     }
+  ],
+  "users": [
+    {
+      "id": "660f",
+      "firstName": "sunnatilla",
+      "lastName": "ortiqov",
+      "email": "stilla@gmal.com",
+      "password": "12345",
+      "date": "2026-01-30",
+      "imgUser": "8343a3d5-a76d-46b2-9ab3-11c6424025c0.jpg"
+    }
   ]
 }

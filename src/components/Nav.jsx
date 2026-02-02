@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router'
 import bg from './../assets/Rectangle 4.png';
 import register from './../assets/register.png';
 
 
 const Nav = () => {
+  const [open, setOpen] = useState(false)
   return (
     <div >
       <header>
@@ -16,13 +17,15 @@ const Nav = () => {
             <Link className='text-[14px] font-bold text-white hover:text-[#5B00FB] hover:border-t transition-all' to="marketplace">MARKETPLACE</Link>
           </div>
           <div className="relative z-50">
-            <Link to="/profile">
-              <img
-                src={register}
-                alt="register"
-                className="w-8 h-8 cursor-pointer hover:scale-110 transition"
-              />
-            </Link>
+            {
+              open ? (
+                <Link to="/register" className="block hover:underline hover:text-[#5B00FB] text-white ">Register</Link>
+              ) : (
+                <button onClick={() => setOpen(true)} className="text-white hover:text-[#ac7efb]">
+                  <img src={register} alt="register" className="w-8 h-8 cursor-pointer hover:scale-110 transition" />
+                </button>
+              )
+            }
           </div>
         </nav>
       </header>
