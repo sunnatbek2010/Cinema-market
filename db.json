@@ -1,0 +1,70 @@
+{
+  "actions": [
+    {
+      "id": 1306368,
+      "adult": false,
+      "backdrop_path": "/3F2EXWF1thX0BdrVaKvnm6mAhqh.jpg",
+      "genre_ids": [
+        28,
+        53,
+        80
+      ],
+      "original_language": "en",
+      "original_title": "The Rip",
+      "overview": "Trust frays when a team of Miami cops discovers millions in cash inside a run-down stash house, calling everyone — and everything — into question.",
+      "popularity": 300.7556,
+      "poster_path": "/p4bW2sJKAwcHuLpfoZK7Zo63osA.jpg",
+      "release_date": "2026-01-13",
+      "title": "The Rip",
+      "video": false,
+      "vote_average": 7.051,
+      "vote_count": 867,
+      "action": "Не нравится"
+    },
+    {
+      "id": 1168190,
+      "adult": false,
+      "backdrop_path": "/qE02kCXOOqINs0iRBjKoZbp8cg8.jpg",
+      "genre_ids": [
+        28,
+        35,
+        80,
+        9648
+      ],
+      "original_language": "en",
+      "original_title": "The Wrecking Crew",
+      "overview": "Estranged half-brothers Jonny and James reunite after their father's mysterious death. As they search for the truth, buried secrets reveal a conspiracy threatening to tear their family apart.",
+      "popularity": 476.9111,
+      "poster_path": "/gbVwHl4YPSq6BcC92TQpe7qUTh6.jpg",
+      "release_date": "2026-01-28",
+      "title": "The Wrecking Crew",
+      "video": false,
+      "vote_average": 6.333,
+      "vote_count": 60,
+      "action": "Нравится"
+    }
+  ],
+  "liked": [
+    {
+      "id": 1326878,
+      "adult": false,
+      "backdrop_path": "/xGbNoh7aWmU81oYuxJoFI07Rz5I.jpg",
+      "genre_ids": [
+        28,
+        53,
+        80
+      ],
+      "original_language": "en",
+      "original_title": "Strangers",
+      "overview": "Seeking revenge on her abusive husband, a woman's life takes a dark turn when she meets a mysterious hitman. Drawn into a whirlwind romance, she spirals into a dangerous vigilante spree. As the body count rises, she begins to unravel the true nature of her partner and the secrets they both conceal.",
+      "popularity": 234.1454,
+      "poster_path": "/ohpuwSBMgP44OPduPkpOtLxh90w.jpg",
+      "release_date": "2024-08-16",
+      "title": "Strangers",
+      "video": false,
+      "vote_average": 5.5,
+      "vote_count": 24,
+      "action": "Нравится"
+    }
+  ]
+}
