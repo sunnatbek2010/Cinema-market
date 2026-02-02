@@ -2,10 +2,10 @@ import React from 'react'
 import { Heart, Monitor, MonitorPause, ThumbsDown, SatelliteDish } from 'lucide-react'
 import { Link } from 'react-router'
 import LinksProfile from '../components/Props/LinksProfile'
-
+// bg-[#101029]
 const Profile = () => {
   return (
-    <div className=' bg-[#101029] flex items-center  max-w-7x1 mx-auto gap-8 p-12 text-white'>
+    <div className='  flex items-center  max-w-7x1 mx-auto gap-8 p-12 text-white'>
       <div className='bg-[#1E1E37] w-79.5 rounded-md ml-11 p-7 '>
         <div className='flex gap-5'>
           {/* avatar */}
