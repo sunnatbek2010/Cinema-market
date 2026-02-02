@@ -8,7 +8,7 @@ const Nav = () => {
   return (
     <div className=''>
       <header>
-        <nav className='w-[1110px] mx-auto flex justify-between pb-22 pt-[61px]'>
+        <nav className='w-277.5 mx-auto flex justify-between pb-22 pt-15.25'>
           <div></div>
           <div className='flex gap-12.5  items-center '>
             <Link className='text-[14px] font-bold text-white hover:text-[#5B00FB] hover:border-t transition-all' to="/">HOME</Link>

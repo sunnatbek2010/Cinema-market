@@ -58,7 +58,7 @@ const ProfileSideBar = () => {
                 </div>
             </div>
 
-            <div className="h-[1px] bg-gray-600/40 my-8"></div>
+            <div className="h-px bg-gray-600/40 my-8"></div>
 
             <ul className="flex flex-col gap-1">
                 {
