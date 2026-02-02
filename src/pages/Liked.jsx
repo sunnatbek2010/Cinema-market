@@ -24,7 +24,7 @@ const Liked = () => {
   return (
     <div className=" text-white">
       <div className="max-w-[1400px] mx-auto flex gap-8 p-12 items-start">
-
+ 
         <div className="flex-1 bg-[#1E1E37] rounded-md p-8">
           <h1 className="text-[32px] font-bold text-center mb-10 animate-bounce">List of Movies & Series</h1>
 

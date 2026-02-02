@@ -117,7 +117,7 @@ const Home = () => {
   }, [])
 
   return (
-    <div className="bg-black">
+    <div>
       <div className="w-[1110px] pt-45 pb-[300px] mx-auto">
         <h1 className="text-white text-[46px] text-center font-bold">NFTs by Curios Music</h1>
         <p className="text-white text-[20px] mt-3 text-center">Own a one-of-a-kind and limited digital collectible</p>
