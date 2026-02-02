@@ -1,97 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-{}
-=======
-=======
->>>>>>> 4eb9136f31db730da96f8fa5099bb181b2cf1c3b
 {
   "actions": [
-    {
-      "id": "1043197",
-      "adult": false,
-      "backdrop_path": "/AecGG1XVCmkk7fT10ko3FC0dLIP.jpg",
-      "genre_ids": [
-        28,
-        14,
-        53
-      ],
-      "original_language": "en",
-      "original_title": "Dust Bunny",
-      "overview": "Ten-year-old Aurora asks her hitman neighbor to kill the monster under her bed that she claims ate her family. To protect her, he must battle an onslaught of assassins while accepting that some monsters are real.",
-      "popularity": 344.9177,
-      "poster_path": "/vobigFZFvbYPf6ElYJu07P9rH8C.jpg",
-      "release_date": "2025-12-11",
-      "title": "Dust Bunny",
-      "video": false,
-      "vote_average": 6.622,
-      "vote_count": 121,
-      "action": "Нравится"
-    },
-    {
-      "id": "83533",
-      "adult": false,
-      "backdrop_path": "/3Dqievkc7krcTtDE2hjRkIsEzB1.jpg",
-      "genre_ids": [
-        878,
-        12,
-        14
-      ],
-      "original_language": "en",
-      "original_title": "Avatar: Fire and Ash",
-      "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
-      "popularity": 257.7783,
-      "poster_path": "/5bxrxnRaxZooBAxgUVBZ13dpzC7.jpg",
-      "release_date": "2025-12-17",
-      "title": "Avatar: Fire and Ash",
-      "video": false,
-      "vote_average": 7.312,
-      "vote_count": 1625,
-      "action": "Не нравится"
-    },
-    {
-      "id": "1326878",
-      "adult": false,
-      "backdrop_path": "/xGbNoh7aWmU81oYuxJoFI07Rz5I.jpg",
-      "genre_ids": [
-        28,
-        53,
-        80
-      ],
-      "original_language": "en",
-      "original_title": "Strangers",
-      "overview": "Seeking revenge on her abusive husband, a woman's life takes a dark turn when she meets a mysterious hitman. Drawn into a whirlwind romance, she spirals into a dangerous vigilante spree. As the body count rises, she begins to unravel the true nature of her partner and the secrets they both conceal.",
-      "popularity": 279.1293,
-      "poster_path": "/ohpuwSBMgP44OPduPkpOtLxh90w.jpg",
-      "release_date": "2024-08-16",
-      "title": "Strangers",
-      "video": false,
-      "vote_average": 5.3,
-      "vote_count": 23,
-      "action": "Нравится"
-    },
-    {
-      "id": 1084242,
-      "adult": false,
-      "backdrop_path": "/5h2EsPKNDdB3MAtOk9MB9Ycg9Rz.jpg",
-      "genre_ids": [
-        16,
-        35,
-        12,
-        10751,
-        9648
-      ],
-      "original_language": "en",
-      "original_title": "Zootopia 2",
-      "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
-      "popularity": 388.6941,
-      "poster_path": "/oJ7g2CifqpStmoYQyaLQgEU32qO.jpg",
-      "release_date": "2025-11-26",
-      "title": "Zootopia 2",
-      "video": false,
-      "vote_average": 7.593,
-      "vote_count": 1253,
-      "action": "Нравится"
-    },
     {
       "id": 1306368,
       "adult": false,
@@ -104,43 +12,59 @@
       "original_language": "en",
       "original_title": "The Rip",
       "overview": "Trust frays when a team of Miami cops discovers millions in cash inside a run-down stash house, calling everyone — and everything — into question.",
-      "popularity": 346.4826,
+      "popularity": 300.7556,
       "poster_path": "/p4bW2sJKAwcHuLpfoZK7Zo63osA.jpg",
       "release_date": "2026-01-13",
       "title": "The Rip",
       "video": false,
-      "vote_average": 7.041,
-      "vote_count": 845,
+      "vote_average": 7.051,
+      "vote_count": 867,
       "action": "Не нравится"
     },
     {
-      "id": 1622,
+      "id": 1168190,
       "adult": false,
-      "backdrop_path": "/ro0tlgnsco4SwbdAgmscLkSlMSL.jpg",
+      "backdrop_path": "/qE02kCXOOqINs0iRBjKoZbp8cg8.jpg",
       "genre_ids": [
-        18,
-        9648,
-        10765
-      ],
-      "origin_country": [
-        "US"
+        28,
+        35,
+        80,
+        9648
       ],
       "original_language": "en",
-      "original_name": "Supernatural",
-      "overview": "When they were boys, Sam and Dean Winchester lost their mother to a mysterious and demonic supernatural force. Subsequently, their father raised them to be soldiers. He taught them about the paranormal evil that lives in the dark corners and on the back roads of America ... and he taught them how to kill it. Now, the Winchester brothers crisscross the country in their '67 Chevy Impala, battling every kind of supernatural threat they encounter along the way. ",
-      "popularity": 236.2533,
-      "poster_path": "/u40gJarLPlIkwouKlzGdobQOV9k.jpg",
-      "first_air_date": "2005-09-13",
-      "name": "Supernatural",
-      "vote_average": 8.3,
-      "vote_count": 8194,
+      "original_title": "The Wrecking Crew",
+      "overview": "Estranged half-brothers Jonny and James reunite after their father's mysterious death. As they search for the truth, buried secrets reveal a conspiracy threatening to tear their family apart.",
+      "popularity": 476.9111,
+      "poster_path": "/gbVwHl4YPSq6BcC92TQpe7qUTh6.jpg",
+      "release_date": "2026-01-28",
+      "title": "The Wrecking Crew",
+      "video": false,
+      "vote_average": 6.333,
+      "vote_count": 60,
       "action": "Нравится"
     }
   ],
-  "like": [],
-  "dislike": []
+  "liked": [
+    {
+      "id": 1326878,
+      "adult": false,
+      "backdrop_path": "/xGbNoh7aWmU81oYuxJoFI07Rz5I.jpg",
+      "genre_ids": [
+        28,
+        53,
+        80
+      ],
+      "original_language": "en",
+      "original_title": "Strangers",
+      "overview": "Seeking revenge on her abusive husband, a woman's life takes a dark turn when she meets a mysterious hitman. Drawn into a whirlwind romance, she spirals into a dangerous vigilante spree. As the body count rises, she begins to unravel the true nature of her partner and the secrets they both conceal.",
+      "popularity": 234.1454,
+      "poster_path": "/ohpuwSBMgP44OPduPkpOtLxh90w.jpg",
+      "release_date": "2024-08-16",
+      "title": "Strangers",
+      "video": false,
+      "vote_average": 5.5,
+      "vote_count": 24,
+      "action": "Нравится"
+    }
+  ]
 }
-<<<<<<< HEAD
->>>>>>> 18dff97e170dff372a363950fe327915629aa947
-=======
->>>>>>> 4eb9136f31db730da96f8fa5099bb181b2cf1c3b

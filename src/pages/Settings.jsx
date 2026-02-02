@@ -17,7 +17,7 @@ const themes = [
   "black",
 ];
 
-const Profile = () => {
+const Settings = () => {
   const [activeLink, setActiveLink] = useState("profile");
   const [activeTheme, setActiveTheme] = useState("dark");
   const [showWarning, setShowWarning] = useState(true);
@@ -79,4 +79,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default Settings;

@@ -10,7 +10,7 @@ import LinksProfile from '../components/Props/LinksProfile'
 
 const navlinks = [
     {
-        link: '/profile',
+        link: '',
         navTitle: 'Profile',
         icon: <Settings size={18} />
     },
@@ -35,7 +35,7 @@ const navlinks = [
         icon: <SatelliteDish size={18} />
     },
     {
-        link: '/settings',
+        link: 'settings',
         navTitle: 'Settings',
         icon: <Settings size={18} />
     }
@@ -44,7 +44,6 @@ const navlinks = [
 const ProfileSideBar = () => {
     return (
         <div className=" w-[320px] rounded-xl p-7">
-            {/* avatar */}
             <div className="flex gap-4 items-center">
                 <img
                     src="/src/assets/Ellipse 180.svg"
@@ -69,8 +68,6 @@ const ProfileSideBar = () => {
                         </LinksProfile>
                     ))
                 }
-
-
 
             </ul>
         </div>

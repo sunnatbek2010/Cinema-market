@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Skeleton } from 'primereact/skeleton';
 import { useNavigate } from 'react-router';
 import { useEffect } from 'react';
+import { MonitorPause, ThumbsDown, ThumbsUpIcon } from 'lucide-react';
 
 const Home = () => {
   const [data, setData] = useState([]);
@@ -66,12 +67,12 @@ const Home = () => {
     const cardWithAction = { ...selectedCard, action: option };
 
     try {
-      const res = await axios.get(`http://localhost:3000/actions?id=${selectedCard.id}`);
+      const res = await axios.get(`http://localhost:3000/liked?id=${selectedCard.id}`);
       if (res.data.length > 0) {
         const existingId = res.data[0].id;
-        await axios.put(`http://localhost:3000/actions/${existingId}`, cardWithAction);
+        await axios.put(`http://localhost:3000/liked/${existingId}`, cardWithAction);
       } else {
-        await axios.post('http://localhost:3000/actions', cardWithAction);
+        await axios.post('http://localhost:3000/liked', cardWithAction);
       }
     } catch (err) {
       console.error('Ошибка при сохранении карточки в db.json:', err);
@@ -85,7 +86,7 @@ const Home = () => {
   }, [])
 
   return (
-    <div className="min-h-screen bg-[#1E1E37]">
+    <div className="">
       <div className="w-[1110px] pt-45 pb-[300px] mx-auto">
         <h1 className="text-white text-[46px] text-center font-bold">NFTs by Curios Music</h1>
         <p className="text-white text-[20px] mt-3 text-center">Own a one-of-a-kind and limited digital collectible</p>
@@ -132,9 +133,9 @@ const Home = () => {
             <button onClick={closeModal} className="absolute top-3 right-3 text-white text-xl font-bold">×</button>
             <h2 className="text-white text-[18px] font-bold mb-4">Выберите вариант</h2>
             <div className="flex flex-col gap-3">
-              <button onClick={() => selectOption('Нравится')} className="py-2 px-4 rounded-full bg-green-500 text-white font-bold">Нравится</button>
-              <button onClick={() => selectOption('Не нравится')} className="py-2 px-4 rounded-full bg-red-500 text-white font-bold">Не нравится</button>
-              <button onClick={() => selectOption('Смотрел')} className="py-2 px-4 rounded-full bg-blue-500 text-white font-bold">Смотрел</button>
+              <button onClick={() => selectOption('Нравится')} className="py-2 px-4 rounded-full flex items-center gap-2  bg-green-500 text-white font-bold"> <ThumbsUpIcon /> Нравится</button>
+              <button onClick={() => selectOption('Не нравится')} className="py-2 px-4 flex items-center gap-2 rounded-full bg-red-500 text-white font-bold"> <ThumbsDown /> Не нравится</button>
+              <button onClick={() => selectOption('Смотрел')} className="py-2 px-4 flex items-center gap-2 rounded-full bg-blue-500 text-white font-bold"><MonitorPause /> Смотрел</button>
             </div>
           </div>
         </div>

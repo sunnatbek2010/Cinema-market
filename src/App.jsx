@@ -6,9 +6,9 @@ import Marketplace from "./pages/Marketplace";
 import Info from './pages/Info.jsx';
 import { BrowserRouter as Router, Routes, Route } from 'react-router';
 import MarketplaceCard from './pages/MarketplaceCard';
-import Profile from './pages/Profile'
-import Settings from './pages/Settings.jsx';
 import ProfileLayout from './pages/profileLayout.jsx';
+import Profile from './pages/Profile.jsx';
+import Settings from './pages/Settings.jsx';
 
 const App = () => {
   return (
@@ -20,11 +20,11 @@ const App = () => {
         <Route path="marketplace" element={<Marketplace />} />
         <Route path="marketplace" element={<MarketplaceCard />} />
 
-        <Route element={<ProfileLayout />}>
-          <Route path="/profile" element={<Profile />} />
-          <Route path='/settings' element={<Settings />} />
+        <Route path='profile' element={<ProfileLayout />}>
+          <Route index element={<Profile />} />
+          <Route path='settings' element={<Settings />} />
         </Route>
-      </Route>  
+      </Route>
     </Routes>
   );
 };
