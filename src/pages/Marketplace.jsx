@@ -12,24 +12,24 @@ export default function Marketplace() {
   const [page, setPage] = useState(1);
   const [search, setSearch] = useState("");
   const [openCategory, setOpenCategory] = useState(false);
-  
+
 
   useEffect(() => {
     axios.get(`https://api.themoviedb.org/3/genre/movie/list?api_key=${APIKey}&language=en-US`)
-    .then(res => setGenres(res.data.genres));
+      .then(res => setGenres(res.data.genres));
   }, []);
 
   useEffect(() => {
-    const url = search ? `https://api.themoviedb.org/3/search/movie?api_key=${APIKey}&query=${search}&page=${page}` 
-    : `https://api.themoviedb.org/3/trending/all/day?api_key=${APIKey}&page=${page}`;
+    const url = search ? `https://api.themoviedb.org/3/search/movie?api_key=${APIKey}&query=${search}&page=${page}`
+      : `https://api.themoviedb.org/3/trending/all/day?api_key=${APIKey}&page=${page}`;
     axios.get(url)
-    .then(res => setItems(res.data.results));
+      .then(res => setItems(res.data.results));
   }, [page, search]);
 
   const filterByGenre = genreId => {
     setSelectedGenre(genreId);
     axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${APIKey}&with_genres=${genreId}&page=1`)
-    .then(res => setItems(res.data.results));
+      .then(res => setItems(res.data.results));
   };
 
   return (
@@ -64,7 +64,29 @@ export default function Marketplace() {
             <img src={movie.poster_path ? img_300 + movie.poster_path : ""} alt={movie.title || movie.name} className="rounded-xl mx-auto mb-4" />
             <h3 className="font-semibold">{movie.title || movie.name}</h3>
             <p className="text-sm opacity-70 mb-4">{movie.media_type === "tv" ? "TV Series" : "Movie"}</p>
-            <Link to={`/info/${movie.id}`} className="inline-block -purple-600 hover:bg-purple-700 transition text-white font-bold py-2 px-6 rounded-full">View Details</Link>
+            <Link to={`/info/${movie.id}`} className="
+            
+            
+            
+  inline-flex items-center justify-center
+  px-6 py-2 rounded-full
+  bg-gradient-to-r from-purple-600 to-indigo-600
+  text-white font-semibold
+  shadow-lg shadow-purple-500/30
+  hover:shadow-xl hover:shadow-purple-500/50
+  hover:scale-105
+  active:scale-95
+  transition-all duration-300
+
+
+            
+            ">View Details</Link>
+
+
+
+
+
+
           </div>
         ))}
       </div>

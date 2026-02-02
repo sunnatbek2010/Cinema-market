@@ -20,7 +20,18 @@ const Profile = () => {
             <input type="text" placeholder="Display Name" className="input-style" />
             <input type="number" placeholder="Phone Number" className="input-style" />
 
-            <button className="mt-3  from-blue-600 to-fuchsia-600 hover:opacity-90 transition rounded-full py-3 font-semibold">
+            <button className="
+  inline-flex items-center justify-center
+  px-6 py-2 rounded-full
+  bg-gradient-to-r from-purple-600 to-indigo-600
+  text-white font-semibold
+  shadow-lg shadow-purple-500/30
+  hover:shadow-xl hover:shadow-purple-500/50
+  hover:scale-105
+  active:scale-95
+  transition-all duration-300
+
+">
               Save changes
             </button>
           </div>

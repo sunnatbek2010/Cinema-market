@@ -115,12 +115,20 @@ const Home = () => {
                 </div>
               ))
               : data.map((item) => (
-                <div key={item.id} className="w-[255px] py-[20px] px-[20px] bg-[radial-gradient(2464.13%_850.69%_at_100%_6.65%,_#BB82DB_0%,_#636DC1_19.3%,_#1D0F35_100%)] rounded-[10px] flex flex-col items-center relative">
+                <div key={item.id} className="w-[255px] py-[20px] px-[20px] border rounded-[10px] flex flex-col items-center relative">
                   <div className="absolute top-2 right-2 cursor-pointer text-white text-xl font-bold" onClick={() => openModal(item)}>⋮</div>
                   <img className="rounded-[5px]" src={item.poster_path ? `${img_300}${item.poster_path}` : ''} alt={item.title || item.name} />
                   <p className="text-white line-clamp-1 font-bold mt-3 text-center">{item.title || item.name}</p>
                   <p className="text-white text-center mt-1">⭐️ {item.vote_average}</p>
-                  <button onClick={() => navigate('/marketplace')} className="bg-white font-bold py-3.5 px-10 rounded-[46px] text-transparent bg-clip-text bg-[linear-gradient(90deg,#5D00FA_0%,#D70BCA_100%)] mt-4">View details</button>
+                  <button onClick={() => navigate('/marketplace')} className="  inline-flex items-center justify-center
+  px-6 py-2 rounded-full
+  bg-gradient-to-r from-purple-600 to-indigo-600
+  text-white font-semibold
+  shadow-lg shadow-purple-500/30
+  hover:shadow-xl hover:shadow-purple-500/50
+  hover:scale-105
+  active:scale-95
+  transition-all duration-300 mt-4">View details</button>
                 </div>
               ))}
           </div>
