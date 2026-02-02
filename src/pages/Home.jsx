@@ -14,7 +14,7 @@ const Home = () => {
 
   const img_300 = import.meta.env.VITE_IMG_300;
   const APIKey = import.meta.env.VITE_API_KEY;
-  const BASE_URL = import.meta.env.VITE_BASE_URL;
+  const BASE_URL = import.meta.env.VITE_URL_ORIGINAL;
 
   const navigate = useNavigate();
   const fetchMovies = async () => {
@@ -117,14 +117,7 @@ const Home = () => {
   }, [])
 
   return (
-    <div>
-      <div className="w-[1110px] pt-45 pb-[300px] mx-auto">
-        <h1 className="text-white text-[46px] text-center font-bold">NFTs by Curios Music</h1>
-        <p className="text-white text-[20px] mt-3 text-center">Own a one-of-a-kind and limited digital collectible</p>
-        <div className="flex justify-center mt-[27px]">
-          <button className="text-white bg-gradient-to-r from-[#5D00FA] to-[#D70BCA] font-bold py-3.5 px-10 rounded-[46px]">Latest NFT drops</button>
-        </div>
-      </div>
+    <div >
 
       <main>
         <section className="w-[1110px] pt-[90px] pb-[160px] mx-auto">
@@ -133,6 +126,7 @@ const Home = () => {
             <button className="text-white mt-[28px] font-bold rounded-[23px] py-[8px] px-[16px] hover:bg-gradient-to-r from-[#5D00FA] to-[#D70BCA] text-[14px]" onClick={fetchMovies}>Discover Movie</button>
             <button className="text-white mt-[28px] font-bold rounded-[23px] py-[8px] px-[16px] hover:bg-gradient-to-r from-[#5D00FA] to-[#D70BCA] text-[14px]" onClick={fetchSeries}>Discover TV Series</button>
           </div>
+
 
           <div className="flex flex-wrap justify-center gap-[30px]">
             {loading
@@ -145,7 +139,7 @@ const Home = () => {
                 </div>
               ))
               : data.map((item) => (
-                <div key={item.id} className="w-[255px] py-[20px] px-[20px] bg-[radial-gradient(2464.13%_850.69%_at_100%_6.65%,_#BB82DB_0%,_#636DC1_19.3%,_#1D0F35_100%)] rounded-[10px] flex flex-col items-center relative">
+                <div key={item.id} className="w-[255px] py-[20px] px-[20px] border rounded-[10px] flex flex-col items-center relative">
                   <div className="absolute top-2 right-2 cursor-pointer text-white text-xl font-bold" onClick={() => openModal(item)}>⋮</div>
                   <img className="rounded-[5px]" src={item.poster_path ? `${img_300}${item.poster_path}` : ''} alt={item.title || item.name} />
                   <p className="text-white line-clamp-1 font-bold mt-3 text-center">{item.title || item.name}</p>
@@ -159,7 +153,7 @@ const Home = () => {
                   <button disabled={!item.action} onClick={() => {
                     if (item.action === 'Не нравится') navigate('/disliked');
                     else if (item.action === 'Смотрел') navigate('/watched');
-                    else navigate('/liked');
+                    else navigate(`/info/${item.id}`);
                   }}
                     className={`font-bold py-3.5 px-10 rounded-[46px] mt-4
                       ${item.action
@@ -167,7 +161,7 @@ const Home = () => {
                         : 'bg-gray-500 text-gray-300 cursor-not-allowed'
                       }`}>View details</button>
                 </div>
-              ))}
+              ))} 
           </div>
         </section>
       </main>

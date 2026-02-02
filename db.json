@@ -1,7 +1,7 @@
 {
   "liked": [
     {
-      "id": 840464,
+      "id": "840464",
       "adult": false,
       "backdrop_path": "/27MIBdzUkPzBC1PAYLpRtbyq7bq.jpg",
       "genre_ids": [
@@ -19,6 +19,49 @@
       "video": false,
       "vote_average": 6.526,
       "vote_count": 251,
+      "action": "Нравится"
+    },
+    {
+      "id": 1168190,
+      "adult": false,
+      "backdrop_path": "/cz4vLJrmaV1zJlRYbxqtvLzeLWB.jpg",
+      "genre_ids": [
+        28,
+        35,
+        80,
+        9648
+      ],
+      "original_language": "en",
+      "original_title": "The Wrecking Crew",
+      "overview": "Estranged half-brothers Jonny and James reunite after their father's mysterious death. As they search for the truth, buried secrets reveal a conspiracy threatening to tear their family apart.",
+      "popularity": 822.1075,
+      "poster_path": "/gbVwHl4YPSq6BcC92TQpe7qUTh6.jpg",
+      "release_date": "2026-01-28",
+      "title": "The Wrecking Crew",
+      "video": false,
+      "vote_average": 6.498,
+      "vote_count": 220,
+      "action": "Нравится"
+    },
+    {
+      "id": 1306368,
+      "adult": false,
+      "backdrop_path": "/3F2EXWF1thX0BdrVaKvnm6mAhqh.jpg",
+      "genre_ids": [
+        28,
+        53,
+        80
+      ],
+      "original_language": "en",
+      "original_title": "The Rip",
+      "overview": "Trust frays when a team of Miami cops discovers millions in cash inside a run-down stash house, calling everyone — and everything — into question.",
+      "popularity": 197.0313,
+      "poster_path": "/eZo31Dhl5BQ6GfbMNf3oU0tUvPZ.jpg",
+      "release_date": "2026-01-13",
+      "title": "The Rip",
+      "video": false,
+      "vote_average": 7.023,
+      "vote_count": 992,
       "action": "Нравится"
     }
   ],
@@ -44,11 +87,32 @@
       "vote_average": 6.498,
       "vote_count": 220,
       "action": "Не нравится"
+    },
+    {
+      "id": 840464,
+      "adult": false,
+      "backdrop_path": "/27MIBdzUkPzBC1PAYLpRtbyq7bq.jpg",
+      "genre_ids": [
+        12,
+        53,
+        878
+      ],
+      "original_language": "en",
+      "original_title": "Greenland 2: Migration",
+      "overview": "Having found the safety of the Greenland bunker after the comet Clarke decimated the Earth, the Garrity family must now risk everything to embark on a perilous journey across the wasteland of Europe to find a new home.",
+      "popularity": 728.05,
+      "poster_path": "/nh43XSQegiFELtR1CyGHeqPMXBA.jpg",
+      "release_date": "2026-01-07",
+      "title": "Greenland 2: Migration",
+      "video": false,
+      "vote_average": 6.526,
+      "vote_count": 251,
+      "action": "Не нравится"
     }
   ],
   "watched": [
     {
-      "id": 66732,
+      "id": "66732",
       "adult": false,
       "backdrop_path": "/8zbAoryWbtH0DKdev8abFAjdufy.jpg",
       "genre_ids": [
