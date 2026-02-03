@@ -67,12 +67,12 @@ const Home = () => {
     const cardWithAction = { ...selectedCard, action: option };
 
     try {
-      const res = await axios.get(`http://localhost:3000/actions?id=${selectedCard.id}`);
+      const res = await axios.get(`http://localhost:3000/liked?id=${selectedCard.id}`);
       if (res.data.length > 0) {
         const existingId = res.data[0].id;
-        await axios.put(`http://localhost:3000/actions/${existingId}`, cardWithAction);
+        await axios.put(`http://localhost:3000/liked/${existingId}`, cardWithAction);
       } else {
-        await axios.post('http://localhost:3000/actions', cardWithAction);
+        await axios.post('http://localhost:3000/liked', cardWithAction);
       }
     } catch (err) {
       console.error('Ошибка при сохранении карточки в db.json:', err);
@@ -133,9 +133,9 @@ const Home = () => {
             <button onClick={closeModal} className="absolute top-3 right-3 text-white text-xl font-bold">×</button>
             <h2 className="text-white text-[18px] font-bold mb-4">Выберите вариант</h2>
             <div className="flex flex-col gap-3">
-              <button onClick={() => selectOption('Нравится')} className="py-2 px-4 rounded-full flex items-center gap-2  bg-green-500 text-white font-bold"> <ThumbsUpIcon/> Нравится</button>
-              <button onClick={() => selectOption('Не нравится')} className="py-2 px-4 flex items-center gap-2 rounded-full bg-red-500 text-white font-bold"> <ThumbsDown/> Не нравится</button>
-              <button onClick={() => selectOption('Смотрел')} className="py-2 px-4 flex items-center gap-2 rounded-full bg-blue-500 text-white font-bold"><MonitorPause/> Смотрел</button>
+              <button onClick={() => selectOption('Нравится')} className="py-2 px-4 rounded-full flex items-center gap-2  bg-green-500 text-white font-bold"> <ThumbsUpIcon /> Нравится</button>
+              <button onClick={() => selectOption('Не нравится')} className="py-2 px-4 flex items-center gap-2 rounded-full bg-red-500 text-white font-bold"> <ThumbsDown /> Не нравится</button>
+              <button onClick={() => selectOption('Смотрел')} className="py-2 px-4 flex items-center gap-2 rounded-full bg-blue-500 text-white font-bold"><MonitorPause /> Смотрел</button>
             </div>
           </div>
         </div>

@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import { Heart, MonitorPause, ThumbsDown, SatelliteDish } from 'lucide-react'
-import LinksProfile from '../components/Props/LinksProfile'
 
 const Liked = () => {
   const [cards, setCards] = useState([])
@@ -12,7 +10,7 @@ const Liked = () => {
   useEffect(() => {
     const fetchCards = async () => {
       try {
-        const res = await axios.get('http://localhost:3000/actions')
+        const res = await axios.get('http://localhost:3000/liked')
         setCards(res.data)
       } catch (err) {
         console.error(err)
@@ -48,7 +46,7 @@ const Liked = () => {
         </div>
 
       </div>
-    </div >
+    </div>
   )
 }
 

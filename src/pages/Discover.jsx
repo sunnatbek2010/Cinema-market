@@ -3,7 +3,7 @@ import axios from "axios";
 import { Link } from "react-router";
 export const img_300 = "https://image.tmdb.org/t/p/w300";
 
-export default function Discover() {
+function Discover() {
     const [items, setItems] = useState([]);
     const [genres, setGenres] = useState([]);
     const [selectedGenre, setSelectedGenre] = useState("");
@@ -105,11 +105,6 @@ export default function Discover() {
                         </div>
                     )}
                 </div>
-
-
-
-
-
                 <input
                     type="text"
                     placeholder="Search Movie..."
@@ -165,3 +160,5 @@ export default function Discover() {
         </div>
     );
 }
+
+export default Discover

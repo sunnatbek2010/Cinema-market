@@ -8,7 +8,6 @@ import Home from './pages/Home';
 import Settings from './pages/Settings.jsx';
 import ProfileLayout from './pages/profileLayout.jsx';
 import Liked from './pages/Liked.jsx';
-import Profile from './pages/Profile.jsx';
 
 const App = () => {
   return (
@@ -22,7 +21,6 @@ const App = () => {
         <Route element={<ProfileLayout />}>
           <Route path="/liked" element={<Liked />} />
           <Route path='/settings' element={<Settings />} />
-          <Route path='/profile' element={<Profile />} />
         </Route>
       </Route>
     </Routes>
