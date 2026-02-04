@@ -27,7 +27,7 @@ const Register = () => {
                 email: data.email,
                 password: data.password,
                 date: data.date,
-                imgUser: data.imgUser?.[0]?.name || "", // store filename only
+                imgUser: data.imgUser?.[0]?.name || "", 
             };
 
             const res = await axios.post('http://localhost:3000/users', userData, {
