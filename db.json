@@ -22,7 +22,7 @@
       "action": "Нравится"
     },
     {
-      "id": 1168190,
+      "id": "1168190",
       "adult": false,
       "backdrop_path": "/cz4vLJrmaV1zJlRYbxqtvLzeLWB.jpg",
       "genre_ids": [
@@ -44,7 +44,7 @@
       "action": "Нравится"
     },
     {
-      "id": 1306368,
+      "id": "1306368",
       "adult": false,
       "backdrop_path": "/3F2EXWF1thX0BdrVaKvnm6mAhqh.jpg",
       "genre_ids": [
@@ -89,7 +89,7 @@
       "action": "Не нравится"
     },
     {
-      "id": 840464,
+      "id": "840464",
       "adult": false,
       "backdrop_path": "/27MIBdzUkPzBC1PAYLpRtbyq7bq.jpg",
       "genre_ids": [
@@ -137,13 +137,13 @@
   ],
   "users": [
     {
-      "id": "660f",
+      "id": "3919",
       "firstName": "sunnatilla",
       "lastName": "ortiqov",
       "email": "stilla@gmal.com",
       "password": "12345",
-      "date": "2026-01-30",
-      "imgUser": "8343a3d5-a76d-46b2-9ab3-11c6424025c0.jpg"
+      "date": "2026-02-04",
+      "imgUser": "ced45c1e69e55a0c282df041e10046e2.jpg"
     }
   ]
 }
