@@ -144,26 +144,7 @@ const Home = () => {
                   <img className="rounded-[5px]" src={item.poster_path ? `${img_300}${item.poster_path}` : ''} alt={item.title || item.name} />
                   <p className="text-white line-clamp-1 font-bold mt-3 text-center">{item.title || item.name}</p>
                   <p className="text-white text-center mt-1">⭐ {item.vote_average}</p>
-<<<<<<< HEAD
                   <button onClick={() => navigate('/profile')} className="bg-white font-bold py-3.5 px-10 rounded-[46px] text-transparent bg-clip-text bg-[linear-gradient(90deg,#5D00FA_0%,#D70BCA_100%)] mt-4">View details</button>
-=======
-
-                  {item.action && (
-                    <span className={`mt-2 px-3 py-2 rounded-full text-white font-bold text-sm ${item.action === 'Нравится' ? 'bg-green-500'
-                      : item.action === 'Не нравится' ? 'bg-red-500'
-                        : 'bg-blue-500'}`}>{item.action}</span>)}
-
-                  <button disabled={!item.action} onClick={() => {
-                    if (item.action === 'Не нравится') navigate('/disliked');
-                    else if (item.action === 'Смотрел') navigate('/watched');
-                    else navigate(`/info/${item.id}`);
-                  }}
-                    className={`font-bold py-3.5 px-10 rounded-[46px] mt-4
-                      ${item.action
-                        ? 'bg-white text-transparent bg-clip-text bg-[linear-gradient(90deg,#5D00FA_0%,#D70BCA_100%)]'
-                        : 'bg-gray-500 text-gray-300 cursor-not-allowed'
-                      }`}>View details</button>
->>>>>>> 1c247a2d71c55467838a79f708ae61071a065bed
                 </div>
               ))}
           </div>
