@@ -5,7 +5,7 @@ import register from './../assets/register.png';
 
  
 const Nav = () => {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false) 
   return (
     <div >
       <header>
