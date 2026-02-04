@@ -12,6 +12,7 @@ import Home from './pages/Home';
 import Liked from './pages/Liked';
 import Disliked from './pages/Disliked';
 import Watched from './pages/Watched';
+import Register from './pages/Register.jsx';
 
 const App = () => {
   return (
@@ -23,12 +24,14 @@ const App = () => {
         <Route path="marketplace" element={<Marketplace />} />
         <Route path="marketplace" element={<MarketplaceCard />} />
 
+        <Route path='register' element={<Register />} />
+
         <Route path='profile' element={<ProfileLayout />}>
           <Route index element={<Profile />} />
           <Route path='settings' element={<Settings />} />
-        <Route path='liked' element={<Liked />} />
-        <Route path='disliked' element={<Disliked />} />
-        <Route path='watched' element={<Watched />} />
+          <Route path='liked' element={<Liked />} />
+          <Route path='disliked' element={<Disliked />} />
+          <Route path='watched' element={<Watched />} />
         </Route>
       </Route>
     </Routes>
