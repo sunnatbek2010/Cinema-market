@@ -161,7 +161,7 @@ const Home = () => {
                         : 'bg-gray-500 text-gray-300 cursor-not-allowed'
                       }`}>View details</button>
                 </div>
-              ))}
+              ))} 
           </div>
         </section>
       </main>

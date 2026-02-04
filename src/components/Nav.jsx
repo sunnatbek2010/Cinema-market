@@ -3,7 +3,7 @@ import { Link } from 'react-router'
 import bg from './../assets/Rectangle 4.png';
 import register from './../assets/register.png';
 
-
+ 
 const Nav = () => {
   const [open, setOpen] = useState(false)
   return (

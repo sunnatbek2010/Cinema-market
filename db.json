@@ -87,6 +87,27 @@
       "vote_average": 6.498,
       "vote_count": 220,
       "action": "Не нравится"
+    },
+    {
+      "id": 840464,
+      "adult": false,
+      "backdrop_path": "/27MIBdzUkPzBC1PAYLpRtbyq7bq.jpg",
+      "genre_ids": [
+        12,
+        53,
+        878
+      ],
+      "original_language": "en",
+      "original_title": "Greenland 2: Migration",
+      "overview": "Having found the safety of the Greenland bunker after the comet Clarke decimated the Earth, the Garrity family must now risk everything to embark on a perilous journey across the wasteland of Europe to find a new home.",
+      "popularity": 728.05,
+      "poster_path": "/nh43XSQegiFELtR1CyGHeqPMXBA.jpg",
+      "release_date": "2026-01-07",
+      "title": "Greenland 2: Migration",
+      "video": false,
+      "vote_average": 6.526,
+      "vote_count": 251,
+      "action": "Не нравится"
     }
   ],
   "watched": [
