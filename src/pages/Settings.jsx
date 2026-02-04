@@ -17,7 +17,7 @@ const themes = [
   "black",
 ];
 
-const Profile = () => {
+const Settings = () => {
   const [activeLink, setActiveLink] = useState("profile");
   const [activeTheme, setActiveTheme] = useState("dark");
   const [showWarning, setShowWarning] = useState(true);
@@ -32,10 +32,12 @@ const Profile = () => {
     const savedTheme = localStorage.getItem("theme") || "dark";
     document.documentElement.setAttribute("data-theme", savedTheme);
     setActiveTheme(savedTheme);
+
+    
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#101029] text-white px-12 py-10 w-full">
+    <div className="min-h-screen  text-white px-12 py-10 w-full">
       <div className="max-w-7xl mx-auto ">
 
         <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">🎨 Theme Settings</h2>
@@ -79,4 +81,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default Settings;

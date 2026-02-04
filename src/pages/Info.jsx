@@ -27,7 +27,7 @@ const Info = () => {
   return (
     <div className="p-10">
       <div className="flex items-center max-w-[1280px] mx-auto gap-10 mt-10">
-        <div className="p-2 bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl overflow-hidden flex-shrink-0">
+        <div className="p-2 -white/5 backdrop-blur-lg border border-white/10 rounded-2xl overflow-hidden flex-shrink-0">
           <img
             className="rounded-2xl"
             src={
@@ -41,6 +41,7 @@ const Info = () => {
 
 
         <div>
+<<<<<<< HEAD
           <div className="flex items-center justify-between mb-30 text-4xl font-bold bg-white/10 backdrop-blur-lg border border-white/10 rounded-2xl p-4">
             <h1>
             {item?.title}
@@ -48,6 +49,19 @@ const Info = () => {
           <button className="cursor-pointer" onClick={() => navigate(-1)}>
               <Undo2 />
             </button>
+=======
+          <h1 className= "mb-30 text-4xl font-bold -white/10 backdrop-blur-lg border border-white/10 rounded-2xl p-4">
+            {item?.title}
+          </h1>
+
+          <p className="mt-6 opacity-80 -white/10 backdrop-blur-lg border border-white/10 rounded-2xl p-4">
+            {item?.release_date}
+          </p>
+
+          <p className="mt-6 opacity-80 -white/10 backdrop-blur-lg border border-white/10 rounded-2xl p-4">
+            {item?.overview}
+          </p>
+>>>>>>> 1c247a2d71c55467838a79f708ae61071a065bed
         </div>
 
         <p className="mt-6 opacity-80 bg-white/10 backdrop-blur-lg border border-white/10 rounded-2xl p-4">

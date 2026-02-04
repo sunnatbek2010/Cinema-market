@@ -11,7 +11,7 @@ import {
 
 export default function Footer() {
   return (
-    <footer className=" text-gray-300 pt-20 px-6">
+    <footer className="bg-black text-gray-300 pt-20 px-6">
       <div className="w-[1110px] mx-auto text-center mb-16">
         <p className="mb-4 text-sm text-gray-400">Enter your email to subscribe to our newsletter</p>
         <div className="flex max-w-md mx-auto items-center bg-black/40 rounded-full px-4 py-2 border border-white/10"> <Mail size={18} className="text-gray-400 mr-2" />
