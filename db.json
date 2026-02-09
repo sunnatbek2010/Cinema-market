@@ -136,6 +136,23 @@
     }
   ],
   "users": [
-   
+    {
+      "id": "281c",
+      "firstName": "Akbarbek",
+      "lastName": "Gafurbekov",
+      "email": "akbarben6@gmail.com",
+      "password": "02022009ak",
+      "date": "2026-02-04",
+      "imgUser": "китоб.jpg"
+    },
+    {
+      "id": "c5ef",
+      "firstName": "Akbarbek",
+      "lastName": "Gafurbekov",
+      "email": "akbarben6@gmail.com",
+      "password": "02022009ak",
+      "date": "2026-02-04",
+      "imgUser": ""
+    }
   ]
 }

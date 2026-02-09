@@ -1,16 +1,28 @@
 import React from 'react'
 import { Link } from 'react-router'
 
-const LinksProfile = ({ children, navTitle, link }) => {
+const LinksProfile = ({ children, navTitle, link, onClick }) => {
+    if (!link) {
+        return (
+            <button
+                onClick={onClick}
+                className="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-white/10 transition text-white w-full text-left"
+            >
+                {children}
+                <span>{navTitle}</span>
+            </button>
+        );
+    }
+
     return (
-        <Link to={link}>
-            <div className="group flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-300 cursor-pointer text-white 
-        hover:bg-[linear-gradient(90deg,#5D00FA_0%,#D70BCA_100%)]" >
-                <span className="opacity-80 group-hover:opacity-100 transition">{children}</span>
-                <span className="font-medium">{navTitle}</span>
-            </div>
+        <Link
+            to={link}
+            className="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-white/10 transition text-white"
+        >
+            {children}
+            <span>{navTitle}</span>
         </Link>
-    )
+    );
 }
 
 export default LinksProfile

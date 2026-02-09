@@ -4,16 +4,14 @@ import {
     MonitorPause,
     ThumbsDown,
     SatelliteDish,
-    Settings
+    Settings,
+    LogOut
 } from 'lucide-react'
 import LinksProfile from '../components/Props/LinksProfile'
+import { useNavigate } from 'react-router';
 
 const navlinks = [
-    {
-        link: '',
-        navTitle: 'Profile',
-        icon: <Settings size={18} />
-    },
+   
     {
         link: 'liked',
         navTitle: 'Liked movies',
@@ -30,18 +28,24 @@ const navlinks = [
         icon: <MonitorPause size={18} />
     },
     {
-        link: 'recommended',
-        navTitle: 'Recommended movies',
-        icon: <SatelliteDish size={18} />
-    },
-    {
         link: 'settings',
         navTitle: 'Settings',
         icon: <Settings size={18} />
+    },
+    {
+        link: null,
+        navTitle: 'Logout',
+        icon: <LogOut size={18} />,
+        logout: () => {
+            localStorage.removeItem("user");
+            window.location.href = "/register";
+        }
     }
 ]
 
 const ProfileSideBar = () => {
+
+
     return (
         <div className=" w-[320px] rounded-xl p-7">
             <div className="flex gap-4 items-center">
@@ -63,7 +67,7 @@ const ProfileSideBar = () => {
             <ul className="flex flex-col gap-1">
                 {
                     navlinks.map((item, index) => (
-                        <LinksProfile key={index} link={item.link} navTitle={item.navTitle}>
+                        <LinksProfile key={index} link={item.link} navTitle={item.navTitle} onClick={item.logout}>
                             {item.icon}
                         </LinksProfile>
                     ))

@@ -3,10 +3,10 @@ import { Outlet } from 'react-router'
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
 
-const Layout = () => {
+const Layout = ({ open, setOpen }) => {
     return (
         <>
-            <Nav />
+            <Nav open={open} setOpen={setOpen} />
             <Outlet />
             <Footer />
 

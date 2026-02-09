@@ -1,11 +1,12 @@
 import axios from "axios";
 import React from "react";
-import { useForm } from "react-hook-form";
+import { set, useForm } from "react-hook-form";
 import { useNavigate } from "react-router";
+import useToggle from "../components/Hooks/useToggle";
 
 const Register = () => {
     const navigate = useNavigate();
-
+    const { open, setOpen } = useToggle(false);
 
     const {
         register,
@@ -26,6 +27,8 @@ const Register = () => {
             if (res.data.length > 0) {
                 localStorage.setItem("user", JSON.stringify(res.data[0]));
                 navigate("/");
+                window.location.reload();
+                setOpen(true);
             } else {
                 alert("Email or password is incorrect");
             }
@@ -62,7 +65,7 @@ const Register = () => {
     return (
         <div className="w-full max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 mb-14">
 
-    
+
             <form
                 onSubmit={handleLogin(onLogin)}
                 className="rounded-2xl p-8 border border-white/10 backdrop-blur"
