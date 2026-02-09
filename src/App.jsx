@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Discover from './pages/Discover'
 import Marketplace from "./pages/Marketplace";
 import Info from './pages/Info.jsx';
@@ -15,6 +15,8 @@ import Watched from './pages/Watched';
 import Register from './pages/Register.jsx';
 
 const App = () => {
+
+
   return (
     <Routes>
       <Route path="/" element={<Layout />}>

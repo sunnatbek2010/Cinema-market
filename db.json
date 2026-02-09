@@ -22,7 +22,7 @@
       "action": "Нравится"
     },
     {
-      "id": 1168190,
+      "id": "1168190",
       "adult": false,
       "backdrop_path": "/cz4vLJrmaV1zJlRYbxqtvLzeLWB.jpg",
       "genre_ids": [
@@ -44,7 +44,7 @@
       "action": "Нравится"
     },
     {
-      "id": 1306368,
+      "id": "1306368",
       "adult": false,
       "backdrop_path": "/3F2EXWF1thX0BdrVaKvnm6mAhqh.jpg",
       "genre_ids": [
@@ -87,13 +87,30 @@
       "vote_average": 6.498,
       "vote_count": 220,
       "action": "Не нравится"
+    },
+    {
+      "id": "840464",
+      "adult": false,
+      "backdrop_path": "/27MIBdzUkPzBC1PAYLpRtbyq7bq.jpg",
+      "genre_ids": [
+        12,
+        53,
+        878
+      ],
+      "original_language": "en",
+      "original_title": "Greenland 2: Migration",
+      "overview": "Having found the safety of the Greenland bunker after the comet Clarke decimated the Earth, the Garrity family must now risk everything to embark on a perilous journey across the wasteland of Europe to find a new home.",
+      "popularity": 728.05,
+      "poster_path": "/nh43XSQegiFELtR1CyGHeqPMXBA.jpg",
+      "release_date": "2026-01-07",
+      "title": "Greenland 2: Migration",
+      "video": false,
+      "vote_average": 6.526,
+      "vote_count": 251,
+      "action": "Не нравится"
     }
   ],
-<<<<<<< HEAD
-  "liked": [
-=======
   "watched": [
->>>>>>> 1c247a2d71c55467838a79f708ae61071a065bed
     {
       "id": "66732",
       "adult": false,
@@ -120,17 +137,22 @@
   ],
   "users": [
     {
-      "id": "660f",
+      "id": "3919",
       "firstName": "sunnatilla",
       "lastName": "ortiqov",
       "email": "stilla@gmal.com",
       "password": "12345",
-      "date": "2026-01-30",
-      "imgUser": "8343a3d5-a76d-46b2-9ab3-11c6424025c0.jpg"
+      "date": "2026-02-04",
+      "imgUser": "ced45c1e69e55a0c282df041e10046e2.jpg"
+    },
+    {
+      "id": "0a84",
+      "firstName": "Sunnatbek",
+      "lastName": "gj;rekglf",
+      "email": "sunnatbek2010@gmail.com",
+      "password": "20101906",
+      "date": "2026-02-12",
+      "imgUser": "m4 g82.jpg"
     }
   ]
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 1c247a2d71c55467838a79f708ae61071a065bed

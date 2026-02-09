@@ -146,7 +146,7 @@ const Home = () => {
                   <p className="text-white text-center mt-1">⭐ {item.vote_average}</p>
                   <button onClick={() => navigate('/profile')} className="bg-white font-bold py-3.5 px-10 rounded-[46px] text-transparent bg-clip-text bg-[linear-gradient(90deg,#5D00FA_0%,#D70BCA_100%)] mt-4">View details</button>
                 </div>
-              ))}
+              ))} 
           </div>
         </section>
       </main>
