@@ -4,7 +4,7 @@ import Marketplace from "./pages/Marketplace";
 import Info from './pages/Info.jsx';
 import { BrowserRouter as Router, Routes, Route } from 'react-router';
 import MarketplaceCard from './pages/MarketplaceCard';
-import ProfileLayout from './pages/profileLayout.jsx';
+import ProfileLayout from './pages/ProfileLayout.jsx';
 import Profile from './pages/Profile.jsx';
 import Settings from './pages/Settings.jsx';
 import Layout from './pages/Layout';
