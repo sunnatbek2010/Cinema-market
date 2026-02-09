@@ -12,7 +12,7 @@ import Liked from './pages/Liked';
 import Disliked from './pages/Disliked';
 import Watched from './pages/Watched';
 import Register from './pages/Register';
-import ProfileLayout from './pages/profileLayout';
+import ProfileLayout from './pages/ProfileLayout';
 
 const App = () => {
 
