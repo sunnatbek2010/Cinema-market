@@ -1,21 +1,20 @@
 import React, { useState } from 'react'
 import Discover from './pages/Discover'
 import Marketplace from "./pages/Marketplace";
-import Info from './pages/Info.jsx';
-import { BrowserRouter as Router, Routes, Route } from 'react-router';
+import Info from './pages/Info';
+import { Routes, Route } from 'react-router';
 import MarketplaceCard from './pages/MarketplaceCard';
-import ProfileLayout from './pages/profileLayout.jsx';
-import Profile from './pages/Profile.jsx';
-import Settings from './pages/Settings.jsx';
+import Profile from './pages/Profile';
+import Settings from './pages/Settings';
 import Layout from './pages/Layout';
 import Home from './pages/Home';
 import Liked from './pages/Liked';
 import Disliked from './pages/Disliked';
 import Watched from './pages/Watched';
-import Register from './pages/Register.jsx';
+import Register from './pages/Register';
+import ProfileLayout from './pages/profileLayout';
 
 const App = () => {
-
 
   return (
     <Routes>
